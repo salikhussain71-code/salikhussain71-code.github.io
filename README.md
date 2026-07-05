@@ -35,6 +35,31 @@ Built deliberately simple — no framework, no build step, so it stays fast, dep
 - **Vanilla JavaScript** — scroll-based section highlighting only
 - **Fonts:** Fraunces (display), Inter (body), JetBrains Mono (metadata/code)
 - **Hosting:** GitHub Pages (free, static)
-- **SEO:** `robots.txt`, `sitemap.xml`, Google Search Console verification
+- **SEO:** robots.txt, sitemap.xml, Google Search Console verification
 
 ## Repository Structure
+
+- `index.html` — the entire site
+- `robots.txt` — crawler permissions + sitemap pointer
+- `sitemap.xml` — page index for search engines
+- `google[...].html` — Google Search Console ownership verification
+
+## Maintenance
+
+This site is updated continuously, not left static:
+
+- New certifications, projects, and journal entries are added as they happen
+- Experience and Publications sections stay empty until real, verifiable entries exist — no placeholder content
+- Last updated date is shown in the site footer
+
+## Contact
+
+- **Email:** salikhussain71@gmail.com
+- **GitHub:** [@salikhussain71-code](https://github.com/salikhussain71-code)
+- **LinkedIn:** [salik-hussain-7822a1388](https://www.linkedin.com/in/salik-hussain-7822a1388/)
+- **Kaggle:** [salikhussain](https://www.kaggle.com/salikhussain)
+- **ORCID:** [0009-0002-2163-1728](https://orcid.org/0009-0002-2163-1728)
+
+---
+
+© 2026 Salik Hussain. Content and design are personal work; feel free to reference the structure, not the content.
