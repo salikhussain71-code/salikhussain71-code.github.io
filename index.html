@@ -120,4 +120,98 @@ footer a{margin:0 8px;color:var(--pri)}
 <h2>How we work</h2>
 <div class="grid steps"><div class="card"><h3>Brief</h3><p>Tell me what you need. I reply with questions and a fixed quote within 24 hours.</p></div><div class="card"><h3>Build</h3><p>I share progress in short updates so you see work early, not at the end.</p></div><div class="card"><h3>Review</h3><p>You test it and request changes. Revisions are included in the agreed scope.</p></div><div class="card"><h3>Deliver</h3><p>Clean code, a short guide and handover. I stay available for fixes after delivery.</p></div></div>
 <h2>Questions clients ask</h2>
-<details><summary>Are you experienced enough?</summary><p>I am a first-year BS CS student with verified certificates in Python, SQL, REST APIs and JavaScript, and a flagship
+<details><summary>Are you experienced enough?</summary><p>I am a first-year BS CS student with verified certificates in Python, SQL, REST APIs and JavaScript, and a flagship AI project on GitHub. I take only projects I can deliver well, and I tell you early if something is outside my skills.</p></details>
+<details><summary>How fast can you start?</summary><p>Usually within two to three days of agreeing the scope. Small projects can finish within a week.</p></details>
+<details><summary>How do we communicate and pay?</summary><p>Email, WhatsApp or the platform you prefer. Payment goes through Upwork, Fiverr or an agreed method, with milestones for larger work.</p></details>
+<details><summary>Do you work with Urdu content?</summary><p>Yes. Urdu and English text processing, Urdu search and Urdu-English document question answering are my specialty.</p></details>
+</section>
+
+<section class="pg" id="projects">
+<h2>Projects</h2><div class="fl" id="pf"></div><div class="grid" id="pg"></div>
+</section>
+
+<section class="pg" id="research">
+<h2>Research</h2>
+<div class="flag"><span class="mono">Flagship project</span><h3 style="margin:6px 0">PAKGOV-RAG</h3><p class="sub" style="margin:0 0 12px">A bilingual Urdu-English retrieval-augmented generation engine for Pakistani government documents: FBR circulars, HEC policy, NADRA procedures, SECP filings and Supreme Court judgments. It combines hybrid dense and sparse retrieval (FAISS and BM25) with a QLoRA fine-tuned bilingual generator, evaluated with RAGAS on faithfulness, answer relevance, context precision and context recall.</p><div class="tags"><span>Python</span><span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>PyTorch</span><span>FastAPI</span></div><p style="margin-top:12px"><a class="l" href="https://github.com/salikhussain71-code/pakgov-rag" target="_blank" rel="noopener">View repository</a></p></div>
+<h3 style="margin:26px 0 12px">Planned papers</h3><div class="grid" id="papers"></div>
+<p class="sub" style="margin-top:20px">Research interests: Nastaliq text processing, bilingual embeddings, code-switching and low-resource fine-tuning (mBERT, XLM-RoBERTa, mT5). Experience and publications will be listed here as soon as they happen.</p>
+</section>
+
+<section class="pg" id="about">
+<h2>About</h2>
+<p class="sub">I am 18, from Kurram District, studying BS Computer Science in Islamabad. I started in pre-medical (F.Sc. PCB), then moved to computer science because I saw how hard it is for Urdu readers to use government information. I build practical tools, learn in public and aim for a fully funded MS in AI abroad (MBZUAI, KAUST, ETH Zurich, EPFL, TU Munich). Freelance work lets me practise on real problems while I study.</p>
+<div class="tl" id="tl"></div>
+<h2>Skills</h2><div id="sk"></div>
+<h2>Credentials</h2><div class="grid" id="cr"></div>
+</section>
+
+<section class="pg" id="contact">
+<h2>Start a project</h2><p class="sub">Tell me what you need, your deadline and a rough budget. I reply within 24 hours.</p>
+<p><a class="btn" id="wa" style="display:none" target="_blank" rel="noopener">Message on WhatsApp</a><a class="btn o" href="mailto:salikhussain71@gmail.com">salikhussain71@gmail.com</a><a class="btn o" id="up" style="display:none" target="_blank" rel="noopener">Upwork profile</a><a class="btn o" id="fv" style="display:none" target="_blank" rel="noopener">Fiverr profile</a></p>
+<form id="f" novalidate>
+<label class="f">Name<input id="n" autocomplete="name"><span class="err" id="en"></span></label>
+<label class="f">Your email<input id="e" type="email" autocomplete="email"><span class="err" id="ee"></span></label>
+<label class="f">Project type<select id="t"><option>Python automation</option><option>Website</option><option>AI chatbot or document search</option><option>Data cleaning and analysis</option><option>Urdu or English text processing</option><option>Other</option></select></label>
+<label class="f">Details<textarea id="m" rows="5"></textarea><span class="err" id="em"></span></label>
+<button class="btn" type="submit" style="justify-self:start">Send enquiry</button>
+</form>
+</section>
+</main>
+<button class="btn" id="top" aria-label="Back to top">Top</button>
+<div id="pal" role="dialog" aria-label="Quick jump"><div id="pl"></div></div>
+<footer>
+<a href="https://github.com/salikhussain71-code" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.kaggle.com/salikhussain" target="_blank" rel="noopener">Kaggle</a><a href="https://leetcode.com/u/salikhussain71/" target="_blank" rel="noopener">LeetCode</a><a href="https://www.hackerrank.com/profile/salikhussain71" target="_blank" rel="noopener">HackerRank</a><a href="https://x.com/salikhussain71" target="_blank" rel="noopener">X</a><a href="https://orcid.org/0009-0002-2163-1728" target="_blank" rel="noopener">ORCID</a>
+<p style="margin-top:10px">Built with care in Pakistan.</p></footer>
+
+<script>
+/* EDIT HERE: add your links. Empty values stay hidden. WhatsApp format: 923001234567 */
+var CFG={whatsapp:"",upwork:"",fiverr:""};
+var $=function(i){return document.getElementById(i)};
+var PAGES=[["home","Home"],["services","Services"],["projects","Projects"],["research","Research"],["about","About"],["contact","Contact"]];
+var SV=[["Python automation","Scripts that clean files, scrape public data, send reports and save hours of manual work.",["Python","Pandas","APIs"]],["Websites","Fast, responsive business and portfolio sites with clear copy and contact forms.",["HTML","CSS","JavaScript"]],["AI chatbot and document search","Ask questions over your PDFs and documents, in English or Urdu, with sources shown.",["RAG","LangChain","FAISS"]],["Data cleaning and analysis","Turn messy spreadsheets and CSVs into clean data and clear charts.",["SQL","Pandas","Kaggle"]],["Urdu and English text work","Search, classification and processing for Urdu text, including Nastaliq documents.",["NLP","Transformers"]]];
+var PR=[
+{n:"PAKGOV-RAG",c:"AI",s:"Active",d:"Bilingual Urdu-English RAG for Pakistani government documents, with hybrid retrieval and RAGAS evaluation.",t:["Python","FAISS","LangChain"],g:"https://github.com/salikhussain71-code/pakgov-rag"},
+{n:"Urdu text classifier",c:"AI",s:"Planned",d:"Sentiment and topic classification with a transformer baseline and a benchmark table.",t:["XLM-R","PyTorch"]},
+{n:"Urdu OCR and search",c:"Data",s:"Planned",d:"Reads scanned Nastaliq documents and makes them searchable.",t:["OCR","Python"]},
+{n:"Study dashboard",c:"Web",s:"Planned",d:"Progress tracker for weekly study hours, courses and GPA goals.",t:["JavaScript","Web"]},
+{n:"This portfolio",c:"Web",s:"Active",d:"Open-source personal site hosted on GitHub Pages.",t:["HTML","CSS","JS"],g:"https://github.com/salikhussain71-code"}];
+var PAP=[["Urdu RAG benchmark for government documents","In progress","Target: ACL SANLP Workshop"],["Low-resource Urdu dataset and evaluation","Idea","Collect, clean and evaluate public-sector Urdu text"],["Efficient fine-tuning for Urdu LLMs","Idea","QLoRA and adapter methods on small hardware"]];
+var TL=[["Aug 2026","F.Sc. Pre-Medical complete","SSC 83.27%, HSSC 71.18%"],["Oct 2026","BS Computer Science begins","Iqra University Islamabad"],["Year 1","Foundations and freelancing start","C, Python, first client projects, PAKGOV-RAG prototype"],["Year 2","Core CS and machine learning","Algorithms, ML, research internship search"],["Year 3","Research and internships","First paper submission"],["Year 4","MS applications","Scholarships: MBZUAI, KAUST, ETH, EPFL, TUM"]];
+var SK=[["Languages",["Python","C++","SQL","JavaScript","Bash","LaTeX"]],["ML and NLP",["PyTorch","HuggingFace","LangChain","FAISS","Scikit-Learn","NumPy","Pandas"]],["Tools",["Git","GitHub Actions","Docker","FastAPI","Neo4j","Linux","Gradio"]],["Mathematics",["Linear Algebra","Calculus","Probability","Optimization"]]];
+var CR=[["CS50's Introduction to Programming with Python","Harvard University","https://cs50.harvard.edu/certificates/ec4d3f24-6d4b-4cba-bc09-7cfae8bf778a"],["Scientific Computing with Python","freeCodeCamp",""],["Problem Solving (Intermediate)","HackerRank","https://www.hackerrank.com/certificates/4cd35bd7e556"],["Problem Solving (Basic)","HackerRank","https://www.hackerrank.com/certificates/5b5ccf0b4211"],["Python (Basic)","HackerRank","https://www.hackerrank.com/certificates/ac3fe144a4cd"],["SQL (Advanced)","HackerRank","https://www.hackerrank.com/certificates/c3f0e29b7368"],["SQL (Intermediate)","HackerRank","https://www.hackerrank.com/certificates/eceac0ebd444"],["SQL (Basic)","HackerRank","https://www.hackerrank.com/certificates/3cc6cdfa1e81"],["REST API (Intermediate)","HackerRank","https://www.hackerrank.com/certificates/16bc1e22871d"],["JavaScript (Basic)","HackerRank","https://www.hackerrank.com/certificates/cacb7f1ae804"],["Software Engineer role certificate","HackerRank","https://www.hackerrank.com/certificates/a4b2b72f8247"],["Introduction to LLMs","SoloLearn",""],["Machine Learning for Beginners","SoloLearn",""],["HP LIFE Ambassador","HP LIFE",""]];
+function card(p){return '<div class="card"><span class="chip '+(p.s==="Active"?"a":"p")+'">'+p.s+'</span><h3>'+p.n+'</h3><p>'+p.d+'</p><div class="tags">'+p.t.map(function(x){return"<span>"+x+"</span>"}).join("")+'</div>'+(p.g?'<a class="l" href="'+p.g+'" target="_blank" rel="noopener">GitHub</a>':'')+'</div>'}
+$("nav").innerHTML=PAGES.map(function(p){return '<button data-go="'+p[0]+'">'+p[1]+'</button>'}).join("");
+$("pl").innerHTML=$("nav").innerHTML;
+$("feat").innerHTML=PR.slice(0,3).map(card).join("");
+$("sv").innerHTML=SV.map(function(s){return '<div class="card"><h3>'+s[0]+'</h3><p>'+s[1]+'</p><div class="tags">'+s[2].map(function(x){return"<span>"+x+"</span>"}).join("")+'</div><a class="l" href="#" data-go="contact">Request a quote</a></div>'}).join("");
+$("tl").innerHTML=TL.map(function(x){return '<div><small>'+x[0]+'</small><b>'+x[1]+'</b><p style="color:var(--mute);font-size:.9rem">'+x[2]+'</p></div>'}).join("");
+$("papers").innerHTML=PAP.map(function(x){return '<div class="card"><span class="chip p">'+x[1]+'</span><h3>'+x[0]+'</h3><p>'+x[2]+'</p></div>'}).join("");
+$("sk").innerHTML=SK.map(function(g){return '<div class="lv">'+g[0]+'</div><div class="pills">'+g[1].map(function(x){return"<span>"+x+"</span>"}).join("")+'</div>'}).join("");
+$("cr").innerHTML=CR.map(function(c){return '<div class="card"><h3 style="font-size:1.05rem">'+c[0]+'</h3><p>'+c[1]+'</p>'+(c[2]?'<a class="l" href="'+c[2]+'" target="_blank" rel="noopener">View credential</a>':'')+'</div>'}).join("");
+var cat="All",cats=["All","AI","Data","Web"];
+function rp(){$("pf").innerHTML=cats.map(function(c){return '<button data-f="'+c+'" class="'+(c===cat?"on":"")+'">'+c+'</button>'}).join("");$("pg").innerHTML=PR.filter(function(p){return cat==="All"||p.c===cat}).map(card).join("")}rp();
+if(CFG.whatsapp){$("wa").href="https://wa.me/"+CFG.whatsapp;$("wa").style.display="inline-block"}
+if(CFG.upwork){$("up").href=CFG.upwork;$("up").style.display="inline-block"}
+if(CFG.fiverr){$("fv").href=CFG.fiverr;$("fv").style.display="inline-block"}
+function go(id){if(!$(id))id="home";document.querySelectorAll(".pg").forEach(function(p){p.classList.toggle("on",p.id===id)});document.querySelectorAll("nav button").forEach(function(b){if(b.dataset.go===id)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});$("pal").classList.remove("on");window.scrollTo(0,0);try{history.replaceState(null,"","#"+id)}catch(e){}}
+document.addEventListener("click",function(e){var t=e.target.closest("[data-go]");if(t){e.preventDefault();go(t.dataset.go);return}var f=e.target.closest("[data-f]");if(f){cat=f.dataset.f;rp()}});
+function pal(o){$("pal").classList.toggle("on",o);if(o)$("pl").firstChild.focus()}
+$("kb").onclick=function(){pal(true)};$("pal").onclick=function(e){if(e.target===$("pal"))pal(false)};
+document.addEventListener("keydown",function(e){if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();pal(!$("pal").classList.contains("on"))}if(e.key==="Escape")pal(false)});
+$("th").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark";try{localStorage.setItem("th",r.dataset.theme)}catch(e){}};
+try{var s=localStorage.getItem("th");if(s)document.documentElement.dataset.theme=s}catch(e){}
+var pts=[[60,50],[240,50],[40,150],[260,150],[80,220],[220,220],[150,40],[150,225]],o="";
+pts.forEach(function(p){o+='<line x1="150" y1="130" x2="'+p[0]+'" y2="'+p[1]+'" stroke="var(--line)" stroke-width="1.5"/>'});
+pts.forEach(function(p,i){o+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7" fill="var(--pri)"><animate attributeName="opacity" values="1;.3;1" dur="'+(2+i*.3)+'s" repeatCount="indefinite"/></circle>'});
+$("ng").innerHTML=o;
+var W=["اردو","Urdu","زبان","NLP"],wi=0;if(!matchMedia("(prefers-reduced-motion:reduce)").matches)setInterval(function(){wi=(wi+1)%W.length;$("gl").textContent=W[wi]},1800);
+addEventListener("scroll",function(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);$("bar").style.width=p*100+"%";$("top").style.display=h.scrollTop>500?"block":"none"});
+$("top").onclick=function(){window.scrollTo(0,0)};
+$("f").addEventListener("submit",function(e){e.preventDefault();var n=$("n").value.trim(),m=$("m").value.trim(),em=$("e").value.trim(),ok=/^\S+@\S+\.\S+$/.test(em);
+$("en").textContent=n?"":"Enter your name.";$("ee").textContent=ok?"":"Enter a valid email.";$("em").textContent=m?"":"Describe your project.";
+if(!n||!m||!ok)return;
+location.href="mailto:salikhussain71@gmail.com?subject="+encodeURIComponent($("t").value+" enquiry from "+n)+"&body="+encodeURIComponent(m+"\n\nReply to: "+em)});
+go((location.hash||"#home").slice(1));
+</script>
+</body>
+</html>
