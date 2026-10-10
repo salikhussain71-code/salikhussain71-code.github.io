@@ -3,215 +3,770 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F2F4F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
 <meta name="google-site-verification" content="eWlesdTKurRL4gQyiMh5GzEnBuS0HP3QyugS0WUbDM8">
-<title>Salik Hussain | AI, NLP and Web Developer</title>
-<meta name="description" content="Salik Hussain, BS Computer Science student at Iqra University Islamabad. Available for freelance Python, web and AI projects. Research: Urdu-English RAG for Pakistani government documents.">
+
+<title>Salik Hussain | Urdu NLP, RAG and AI Systems</title>
+<meta name="description" content="Salik Hussain, BS Computer Science student at Iqra University Islamabad. Building PAKGOV-RAG, a bilingual Urdu-English RAG system for Pakistani government documents. Open to freelance Python, web and AI work.">
 <link rel="canonical" href="https://salikhussain71-code.github.io/">
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://salikhussain71-code.github.io/">
-<meta property="og:title" content="Salik Hussain | AI, NLP and Web Developer">
-<meta property="og:description" content="Freelance Python, web and AI projects. Building PAKGOV-RAG, a bilingual Urdu-English RAG system.">
+<meta property="og:title" content="Salik Hussain | Urdu NLP, RAG and AI Systems">
+<meta property="og:description" content="Computer Science student building PAKGOV-RAG, a bilingual Urdu-English RAG system for Pakistani government documents.">
 <meta property="og:image" content="https://salikhussain71-code.github.io/og-image.png">
+<meta property="og:image:alt" content="Salik Hussain, Urdu NLP and RAG systems">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="https://salikhussain71-code.github.io/og-image.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Salik Hussain","url":"https://salikhussain71-code.github.io/","image":"https://salikhussain71-code.github.io/og-image.png","jobTitle":"BS Computer Science Student and Freelance Developer","affiliation":{"@type":"CollegeOrUniversity","name":"Iqra University Islamabad"},"email":"mailto:salikhussain71@gmail.com","sameAs":["https://www.linkedin.com/in/salik-hussain-7822a1388/","https://github.com/salikhussain71-code","https://www.hackerrank.com/profile/salikhussain71","https://leetcode.com/u/salikhussain71/","https://www.kaggle.com/salikhussain","https://x.com/salikhussain71","https://orcid.org/0009-0002-2163-1728"],"knowsAbout":["Natural Language Processing","Retrieval-Augmented Generation","Urdu NLP","Python","Web Development","Machine Learning"]}</script>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Salik Hussain | Urdu NLP, RAG and AI Systems">
+<meta name="twitter:description" content="Computer Science student building PAKGOV-RAG, a bilingual Urdu-English RAG system for Pakistani government documents.">
+<meta name="twitter:image" content="https://salikhussain71-code.github.io/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F4FD8'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23fff'%3ESH%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Salik Hussain","url":"https://salikhussain71-code.github.io/","image":"https://salikhussain71-code.github.io/og-image.png","jobTitle":"BS Computer Science Student and Freelance Developer","affiliation":{"@type":"CollegeOrUniversity","name":"Iqra University Islamabad"},"email":"mailto:salikhussain71@gmail.com","sameAs":["https://www.linkedin.com/in/salik-hussain-7822a1388/","https://github.com/salikhussain71-code","https://www.hackerrank.com/profile/salikhussain71","https://leetcode.com/u/salikhussain71/","https://www.kaggle.com/salikhussain","https://x.com/salikhussain71","https://orcid.org/0009-0002-2163-1728"],"knowsAbout":["Natural Language Processing","Retrieval-Augmented Generation","Urdu NLP","Python","Web Development","Machine Learning"]}
+</script>
+
+<!-- Applies the saved theme before first paint to avoid a flash; also marks JS as available. -->
+<script>
+(function(){
+  var r=document.documentElement;
+  r.classList.add("js");
+  try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")r.setAttribute("data-theme",t)}catch(e){}
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Noto+Nastaliq+Urdu:wght@400&display=swap">
+
 <style>
-:root{--bg:#EEF1F4;--bg2:#E4E8EC;--card:#fff;--ink:#101828;--mute:#4B5565;--pri:#0F7B63;--acc:#B8861F;--line:#D6DCE2;--on:#fff;
---d:'Fraunces',Georgia,serif;--b:'Inter',system-ui,sans-serif;--m:'JetBrains Mono',monospace}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1114;--bg2:#121B1F;--card:#131D21;--ink:#EAF0EE;--mute:#9AA9A8;--pri:#2DD4A7;--acc:#F5B84B;--line:#23312F;--on:#06231B}}
-:root[data-theme="dark"]{--bg:#0B1114;--bg2:#121B1F;--card:#131D21;--ink:#EAF0EE;--mute:#9AA9A8;--pri:#2DD4A7;--acc:#F5B84B;--line:#23312F;--on:#06231B}
-html{scroll-behavior:smooth}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--b)}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--d);font-weight:600;line-height:1.1}
-:focus-visible{outline:2px solid var(--pri);outline-offset:3px}
-#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--pri);z-index:30}
-header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.hd{max-width:1100px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap}
-.logo{font:600 1.35rem var(--d);background:none;border:0;color:var(--ink);cursor:pointer}
-nav{display:flex;gap:2px;flex-wrap:wrap}
-nav button,.ic{background:none;border:0;color:var(--mute);font:500 .88rem var(--b);padding:7px 11px;border-radius:18px;cursor:pointer}
-nav button[aria-current="page"]{background:var(--bg2);color:var(--ink)}
-.ic{border:1px solid var(--line);color:var(--ink)}
-main{max-width:1100px;margin:auto;padding:0 20px 70px}
-.pg{display:none}.pg.on{display:block;animation:f .3s}
-@keyframes f{from{opacity:0}to{opacity:1}}
-@media (prefers-reduced-motion:reduce){.pg.on{animation:none}html{scroll-behavior:auto}}
-.mono{font-family:var(--m);font-size:.78rem;color:var(--pri)}
-.hero{padding:56px 0 36px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-h1{font-size:clamp(2.5rem,8vw,5rem);letter-spacing:-.02em;margin:10px 0 14px}
-.urdu{font-family:'Noto Nastaliq Urdu',serif;direction:rtl;font-size:1.5rem;color:var(--acc)}
-.lead{color:var(--mute);max-width:56ch;margin:14px 0 22px}
-.btn{display:inline-block;background:var(--pri);color:var(--on);border:0;padding:11px 22px;border-radius:26px;font:600 .95rem var(--b);cursor:pointer;margin:0 8px 8px 0}
-.btn.o{background:none;color:var(--ink);border:1px solid var(--line)}
-.net{width:100%;border:1px solid var(--line);border-radius:18px;background:var(--card);color:var(--ink)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:10px 0 24px}
-.st{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--card)}
-.st b{font:600 1.9rem var(--d);display:block}.st span{font-size:.82rem;color:var(--mute)}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:44px 0 8px}
-.sub{color:var(--mute);margin-bottom:22px;max-width:62ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px}
-.card h3{font-size:1.2rem}.card p{color:var(--mute);font-size:.92rem;flex:1}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tags span,.chip{font:500 .72rem var(--m);background:var(--bg2);padding:4px 9px;border-radius:12px;align-self:flex-start}
-.chip.a{color:var(--pri)}.chip.p{color:var(--acc)}
-a.l{font:500 .8rem var(--m);color:var(--pri);border-bottom:1px solid var(--acc);align-self:flex-start}
-.fl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.fl button{border:1px solid var(--line);background:none;color:var(--ink);padding:7px 15px;border-radius:18px;cursor:pointer;font:500 .85rem var(--b)}
-.fl button.on{background:var(--ink);color:var(--bg)}
-.flag{border-left:3px solid var(--pri);background:var(--card);border-radius:12px;padding:26px;margin-bottom:16px}
-.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:22px}
-.tl div{position:relative;padding-bottom:20px}
-.tl div::before{content:'';position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--pri)}
-.tl b{font-family:var(--d);font-size:1.1rem}.tl small{display:block;color:var(--acc);font-family:var(--m)}
-.steps{counter-reset:s}.steps .card::before{counter-increment:s;content:counter(s);font:600 1.6rem var(--d);color:var(--acc)}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
-summary{cursor:pointer;font:600 1.02rem var(--d)}
-details p{color:var(--mute);margin-top:8px;font-size:.93rem}
-.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
-.pills span{font:400 .8rem var(--m);background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:12px}
-.lv{font:500 .72rem var(--m);color:var(--mute);margin:14px 0 6px}
-form{display:grid;gap:12px;max-width:520px;margin-top:20px}
-label.f{display:grid;gap:5px;font-weight:500;font-size:.9rem}
-input,textarea,select{font:inherit;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
-.err{color:#C0392B;font-size:.82rem;min-height:1em}
-#pal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:start center;padding-top:15vh;z-index:40}
-#pal.on{display:grid}
-#pal div{background:var(--card);border:1px solid var(--line);border-radius:14px;width:min(420px,92vw);padding:10px}
-#pal button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--ink);padding:10px 12px;border-radius:8px;cursor:pointer;font:500 .95rem var(--b)}
-#pal button:hover,#pal button:focus{background:var(--bg2)}
-#top{position:fixed;right:16px;bottom:16px;display:none;z-index:15}
-footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;color:var(--mute);font-size:.85rem}
-footer a{margin:0 8px;color:var(--pri)}
-@media(max-width:780px){.hero{grid-template-columns:1fr}}
+/* ===== Design tokens ===== */
+:root{
+  --bg:#F2F4F7; --surface:#FFFFFF; --sunken:#E8ECF2;
+  --ink:#0E1A2B; --mute:#475467; --line:#D3DAE4; --line-strong:#9AA6B8;
+  --acc:#1F4FD8; --acc-ink:#FFFFFF; --acc-soft:#E3EAFB;
+  --ok:#0B6B4F; --wip:#8A5200; --plan:#475467;
+  --focus:#1F4FD8;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --urdu:'Noto Nastaliq Urdu','Jameel Noor Nastaleeq','Urdu Typesetting',serif;
+  --r-s:6px; --r-m:12px;
+  --maxw:1120px; --gutter:clamp(1rem,4vw,2rem);
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2.5rem; --s5:4rem;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1220; --surface:#111A2B; --sunken:#0E1626;
+    --ink:#E7ECF4; --mute:#A6B3C6; --line:#223049; --line-strong:#4A5C7A;
+    --acc:#8FB0FF; --acc-ink:#0A1530; --acc-soft:#16264A;
+    --ok:#5FD4A6; --wip:#F0BC63; --plan:#A6B3C6; --focus:#8FB0FF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --surface:#111A2B; --sunken:#0E1626;
+  --ink:#E7ECF4; --mute:#A6B3C6; --line:#223049; --line-strong:#4A5C7A;
+  --acc:#8FB0FF; --acc-ink:#0A1530; --acc-soft:#16264A;
+  --ok:#5FD4A6; --wip:#F0BC63; --plan:#A6B3C6; --focus:#8FB0FF;
+}
+
+/* ===== Base ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--sans);overflow-wrap:break-word;
+  padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.75rem,1.3rem + 2vw,2.5rem);letter-spacing:-.01em}
+h3{font-size:1.25rem}
+p{margin:0 0 var(--s2)}
+ul,ol{margin:0;padding:0}
+a{color:var(--acc);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px}
+code,.mono{font-family:var(--mono);font-size:.875em}
+.container{width:min(100% - 2*var(--gutter),var(--maxw));margin-inline:auto}
+.muted{color:var(--mute)}
+.skip{position:absolute;left:var(--s2);top:-4rem;background:var(--acc);color:var(--acc-ink);padding:.6rem 1rem;border-radius:var(--r-s);z-index:100}
+.skip:focus{top:var(--s1)}
+
+/* ===== Header ===== */
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem var(--s2);padding-block:.5rem}
+.brand{font:600 1.3rem/1 var(--serif);color:var(--ink);text-decoration:none;margin-right:auto;padding:.7rem 0}
+.tools{display:flex;gap:.5rem}
+.nav{order:3;flex-basis:100%}
+.nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 .8rem;border-radius:var(--r-s);color:var(--mute);text-decoration:none;font-weight:500;font-size:.9375rem}
+.nav a:hover{color:var(--ink);background:var(--sunken)}
+.nav a[aria-current="true"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--acc)}
+.icon-btn{min-height:44px;min-width:44px;padding:0 .9rem;border:1px solid var(--line-strong);border-radius:var(--r-s);background:var(--surface);color:var(--ink);font:500 .9rem var(--sans);cursor:pointer}
+.icon-btn:hover{background:var(--sunken)}
+.menu-btn{display:none}
+@media (max-width:999px){
+  .js .menu-btn{display:inline-block}
+  .js .nav{display:none}
+  .js .nav.open{display:block;padding-bottom:var(--s1)}
+  .js .nav ul{flex-direction:column}
+  .js .nav a{width:100%}
+}
+@media (min-width:1000px){
+  .nav{order:0;flex-basis:auto}
+  .brand{margin-right:var(--s2)}
+  .bar{flex-wrap:nowrap}
+  .nav{margin-right:auto}
+}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem 1.15rem;border-radius:var(--r-s);border:1px solid var(--acc);background:var(--acc);color:var(--acc-ink);font:600 .9375rem var(--sans);text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.08);text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn.alt:hover{background:var(--sunken);filter:none}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--s3)}
+
+/* ===== Sections ===== */
+section{padding-block:clamp(3rem,7vw,5rem);border-top:1px solid var(--line)}
+.head{max-width:62ch;margin-bottom:var(--s4)}
+.head p{color:var(--mute);margin:.75rem 0 0}
+.split{display:grid;gap:var(--s4)}
+@media (min-width:900px){.split{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s5);align-items:start}}
+
+/* ===== Hero ===== */
+#top{border-top:0;padding-block:clamp(2.5rem,7vw,5rem) clamp(2rem,5vw,3.5rem)}
+.hero{display:grid;gap:var(--s4);align-items:center}
+@media (min-width:900px){.hero{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s5)}}
+h1{font-size:clamp(2.1rem,1.2rem + 4.4vw,4rem);letter-spacing:-.02em;line-height:1.08}
+.lead{font-size:1.0625rem;color:var(--mute);max-width:60ch;margin:var(--s3) 0 0}
+.lead strong{color:var(--ink);font-weight:600}
+.where{margin-top:var(--s2);font-size:.9rem;color:var(--mute)}
+
+/* The memorable element: one question in three written forms */
+.forms{margin:0;background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r-m);padding:var(--s3);box-shadow:6px 6px 0 var(--acc-soft)}
+.forms figcaption{font:600 1.05rem var(--serif);margin-bottom:var(--s2)}
+.forms dl{margin:0;display:grid;gap:0}
+.forms dl>div{padding:.85rem 0;border-top:1px solid var(--line)}
+.forms dt{font-size:.8125rem;color:var(--mute);margin-bottom:.15rem}
+.forms dd{margin:0;font-size:1.2rem}
+.forms .urdu{font-family:var(--urdu);line-height:2.1;text-align:right;font-size:1.3rem}
+.forms .note{font-size:.8125rem;color:var(--mute);margin:var(--s2) 0 0;padding-top:var(--s2);border-top:1px solid var(--line)}
+
+/* ===== Evidence snapshot ===== */
+.snap{display:grid;gap:0;margin:0;border:1px solid var(--line);border-radius:var(--r-m);background:var(--surface);overflow:hidden}
+.snap>div{padding:var(--s2) var(--s3);border-bottom:1px solid var(--line)}
+.snap>div:last-child{border-bottom:0}
+.snap dt{font-size:.8125rem;color:var(--mute)}
+.snap dd{margin:0;font:600 1.5rem/1.2 var(--serif)}
+@media (min-width:640px){.snap{grid-template-columns:repeat(2,1fr)}.snap>div:nth-child(odd){border-right:1px solid var(--line)}.snap>div:nth-last-child(-n+2){border-bottom:0}}
+@media (min-width:1000px){.snap{grid-template-columns:repeat(4,1fr)}.snap>div{border-bottom:0;border-right:1px solid var(--line)}.snap>div:last-child{border-right:0}}
+
+/* ===== Status labels (text plus shape, never colour alone) ===== */
+.tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.8125rem;font-weight:600;padding:.1rem .6rem;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.tag::before{content:"";width:.55rem;height:.55rem;border-radius:50%;border:2px solid currentColor}
+.tag.active{color:var(--ok)}.tag.active::before{background:currentColor}
+.tag.wip{color:var(--wip)}.tag.wip::before{background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+.tag.plan{color:var(--plan)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;font-size:.875rem;color:var(--mute);margin:0 0 var(--s3)}
+
+/* ===== Lists and rows ===== */
+.rows{list-style:none;border-top:1px solid var(--line-strong)}
+.rows>li{display:grid;gap:.35rem var(--s3);padding:var(--s2) 0;border-bottom:1px solid var(--line)}
+@media (min-width:760px){.rows>li{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}}
+.rows h3{font-size:1.1rem;font-family:var(--sans);font-weight:600}
+.rows p{margin:0;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin-top:.5rem}
+.chips li{font-size:.8125rem;background:var(--sunken);border-radius:var(--r-s);padding:.1rem .55rem}
+
+/* ===== Tables ===== */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-m);background:var(--surface)}
+.scroll:focus-visible{outline-offset:2px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.9375rem}
+caption{text-align:left;padding:var(--s2) var(--s2) 0;font:600 1.05rem var(--serif)}
+th,td{text-align:left;padding:.7rem var(--s2);border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;font-size:.875rem;color:var(--mute);background:var(--sunken)}
+tbody tr:last-child td{border-bottom:0}
+td .mono{overflow-wrap:anywhere}
+
+/* ===== Case study ===== */
+.case{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r-m);padding:clamp(1.25rem,3vw,2.5rem);margin-bottom:var(--s4)}
+.case-top{display:flex;flex-wrap:wrap;gap:.5rem var(--s2);align-items:center;margin-bottom:var(--s2)}
+.case h3{font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem)}
+.facts{display:grid;gap:var(--s3);margin:var(--s3) 0 0}
+@media (min-width:760px){.facts{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s4)}}
+.facts dt{font:600 1rem var(--serif);margin-bottom:.25rem}
+.facts dd{margin:0;color:var(--mute)}
+.facts .wide{grid-column:1/-1}
+.pipe{list-style:none;display:grid;gap:.75rem;margin:var(--s2) 0 0;counter-reset:p}
+@media (min-width:640px){.pipe{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.pipe li{counter-increment:p;border:1px solid var(--line-strong);border-radius:var(--r-s);padding:.75rem;background:var(--bg);font-size:.9rem}
+.pipe li::before{content:"Stage " counter(p);display:block;font-size:.78rem;color:var(--mute);margin-bottom:.15rem}
+.pipe b{display:block}
+.pipe-note{font-size:.8125rem;color:var(--mute);margin:.75rem 0 0}
+.case-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--s3)}
+
+/* ===== Plan list (a real sequence) ===== */
+.plan{list-style:none;border-left:2px solid var(--line-strong);margin-left:.4rem;padding-left:var(--s3)}
+.plan li{position:relative;padding-bottom:var(--s3)}
+.plan li:last-child{padding-bottom:0}
+.plan li::before{content:"";position:absolute;left:calc(-1*var(--s3) - 7px);top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--acc)}
+.plan b{font:600 1.05rem var(--serif);display:block}
+.plan span{color:var(--mute);font-size:.9375rem}
+
+/* ===== Skills ===== */
+.skills{display:grid;gap:var(--s3)}
+@media (min-width:760px){.skills{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.skills h3{font-size:1.1rem;margin-bottom:.25rem}
+.skills p{font-size:.875rem;color:var(--mute);margin-bottom:.5rem}
+.skills .chips{margin-top:0}
+
+/* ===== Services, FAQ, process ===== */
+.process{list-style:none;display:grid;gap:var(--s2);counter-reset:s;margin:0 0 var(--s4)}
+@media (min-width:760px){.process{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.process li{counter-increment:s;border-top:2px solid var(--acc);padding-top:.75rem}
+.process li::before{content:"Step " counter(s);display:block;font-size:.8125rem;color:var(--mute)}
+.process b{font:600 1.05rem var(--serif)}
+.process p{margin:.25rem 0 0;color:var(--mute);font-size:.9375rem}
+details{border-bottom:1px solid var(--line);padding:.9rem 0}
+details:first-of-type{border-top:1px solid var(--line-strong)}
+summary{cursor:pointer;font-weight:600;min-height:28px}
+details p{margin:.6rem 0 0;color:var(--mute);max-width:70ch}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;gap:var(--s4)}
+@media (min-width:900px){.contact-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s5)}}
+.links{list-style:none;border-top:1px solid var(--line-strong)}
+.links li{display:flex;justify-content:space-between;gap:var(--s2);padding:.7rem 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.links a{overflow-wrap:anywhere}
+form{display:grid;gap:var(--s2)}
+label{display:grid;gap:.35rem;font-weight:500;font-size:.9375rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r-s);padding:.7rem .8rem;min-height:44px;width:100%}
+textarea{resize:vertical}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#B42318;border-width:2px}
+.err{color:#B42318;font-size:.875rem;min-height:1.25em;font-weight:500}
+:root[data-theme="dark"] .err{color:#FF9B90}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#FF9B90}}
+.hint{font-size:.875rem;color:var(--mute);margin:0}
+
+footer{border-top:1px solid var(--line);padding:var(--s4) 0 calc(var(--s4) + env(safe-area-inset-bottom,0px));font-size:.9rem;color:var(--mute)}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin:0 0 var(--s2)}
+footer a{display:inline-block;padding:.5rem 0}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+@media print{.site-header,.actions,.tools,form{display:none}section{break-inside:avoid}}
 </style>
 </head>
+
 <body>
-<div id="bar"></div>
-<header><div class="hd">
-<button class="logo" data-go="home">Salik Hussain</button>
-<nav aria-label="Main" id="nav"></nav>
-<span><button class="ic" id="kb" aria-label="Quick jump">Jump ⌘K</button> <button class="ic" id="th" aria-label="Toggle theme">Theme</button></span>
-</div></header>
-<main>
+<a class="skip" href="#main">Skip to main content</a>
 
-<section class="pg" id="home">
-<div class="hero"><div>
-<span class="mono">Available for freelance work · BS CS, Iqra University Islamabad</span>
-<h1>I build AI and web tools that work.</h1>
-<p class="urdu">اردو کے لیے مصنوعی ذہانت</p>
-<p class="lead">Python automation, fast websites and AI document search, built by a computer science student who researches Urdu NLP. Clear communication, fixed scope, and a reply within 24 hours.</p>
-<button class="btn" data-go="contact">Hire me</button><button class="btn o" data-go="projects">See my work</button><button class="btn o" data-go="services">Services</button>
-</div>
-<svg class="net" viewBox="0 0 300 260" role="img" aria-label="Network linking English and Urdu words"><g id="ng"></g>
-<text x="150" y="132" text-anchor="middle" font-size="26" fill="currentColor" style="font-family:'Noto Nastaliq Urdu',serif" id="gl">اردو</text></svg></div>
-<div class="stats"><div class="st"><b>14+</b><span>Verified certificates</span></div><div class="st"><b>3</b><span>Papers planned</span></div><div class="st"><b>24h</b><span>Reply time</span></div><div class="st"><b>2</b><span>Languages: Urdu, English</span></div></div>
-<h2>Featured work</h2><div class="grid" id="feat"></div>
-<h2>How clients can verify me</h2>
-<p class="sub">Every claim on this page links to a public profile: certificates on HackerRank and Harvard CS50, code on GitHub, problem solving on LeetCode, data work on Kaggle and a research identity on ORCID.</p>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="#top" aria-label="Salik Hussain, back to top">Salik Hussain</a>
+    <nav id="site-nav" class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#services">Freelance</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="theme" type="button" aria-pressed="false">Dark mode</button>
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section id="top" aria-labelledby="h-hero">
+  <div class="container hero">
+    <div>
+      <h1 id="h-hero">Trustworthy AI for Urdu and Pakistani public information.</h1>
+      <p class="lead">I am <strong>Salik Hussain</strong>, a first-year BS Computer Science student at Iqra University Islamabad. I am building <strong>PAKGOV-RAG</strong>, a bilingual Urdu-English retrieval-augmented generation (RAG) system for Pakistani government documents, and studying whether AI answers equally well in Urdu script, Roman Urdu and mixed Urdu-English text.</p>
+      <div class="actions">
+        <a class="btn" href="#projects">Explore projects</a>
+        <a class="btn alt" href="https://github.com/salikhussain71-code" target="_blank" rel="noopener noreferrer">View GitHub</a>
+        <a class="btn alt" href="#publications">Research plan</a>
+        <a class="btn alt" href="#contact">Contact me</a>
+      </div>
+      <p class="where">Based in Rawalpindi, Pakistan. Available for freelance Python, web and AI projects.</p>
+    </div>
+
+    <figure class="forms" aria-labelledby="forms-cap">
+      <figcaption id="forms-cap">The research problem in one example</figcaption>
+      <dl>
+        <div><dt>Urdu script</dt><dd class="urdu" lang="ur" dir="rtl">پاسپورٹ کی فیس کتنی ہے؟</dd></div>
+        <div><dt>Roman Urdu</dt><dd lang="ur-Latn">Passport ki fee kitni hai?</dd></div>
+        <div><dt>Urdu-English mixed</dt><dd class="urdu" lang="ur" dir="rtl">پاسپورٹ کی fee کتنی ہے؟</dd></div>
+      </dl>
+      <p class="note">Illustrative inputs only. This is not model output and no results are claimed. The open question is whether a system finds and cites the same correct source for all three.</p>
+    </figure>
+  </div>
+
+  <div class="container" style="margin-top:var(--s4)">
+    <dl class="snap" aria-label="Snapshot of current evidence">
+      <div><dt>Peer-reviewed publications</dt><dd>None yet</dd></div>
+      <div><dt>Core papers planned</dt><dd>3</dd></div>
+      <div><dt>Public GitHub repositories</dt><dd>29</dd></div>
+      <div><dt>GitHub contributions, past year</dt><dd>719</dd></div>
+    </dl>
+    <p class="hint" style="margin-top:.75rem">GitHub figures were read from my profile in October 2026. Everything on this page is finished, in progress, or marked Planned.</p>
+  </div>
 </section>
 
-<section class="pg" id="services">
-<h2>Services</h2><p class="sub">Fixed-scope work with a written quote before I start. You approve each stage before the next one begins.</p>
-<div class="grid" id="sv"></div>
-<h2>How we work</h2>
-<div class="grid steps"><div class="card"><h3>Brief</h3><p>Tell me what you need. I reply with questions and a fixed quote within 24 hours.</p></div><div class="card"><h3>Build</h3><p>I share progress in short updates so you see work early, not at the end.</p></div><div class="card"><h3>Review</h3><p>You test it and request changes. Revisions are included in the agreed scope.</p></div><div class="card"><h3>Deliver</h3><p>Clean code, a short guide and handover. I stay available for fixes after delivery.</p></div></div>
-<h2>Questions clients ask</h2>
-<details><summary>Are you experienced enough?</summary><p>I am a first-year BS CS student with verified certificates in Python, SQL, REST APIs and JavaScript, and a flagship AI project on GitHub. I take only projects I can deliver well, and I tell you early if something is outside my skills.</p></details>
-<details><summary>How fast can you start?</summary><p>Usually within two to three days of agreeing the scope. Small projects can finish within a week.</p></details>
-<details><summary>How do we communicate and pay?</summary><p>Email, WhatsApp or the platform you prefer. Payment goes through Upwork, Fiverr or an agreed method, with milestones for larger work.</p></details>
-<details><summary>Do you work with Urdu content?</summary><p>Yes. Urdu and English text processing, Urdu search and Urdu-English document question answering are my specialty.</p></details>
+<!-- ================= RESEARCH ================= -->
+<section id="research" aria-labelledby="h-research">
+  <div class="container">
+    <div class="head">
+      <h2 id="h-research">Research focus</h2>
+      <p>One question guides my work: can AI give correct, trusted answers in Urdu, Roman Urdu and Urdu-English mixed text?</p>
+    </div>
+
+    <p class="legend" id="legend">
+      <span>Status labels used on this page:</span>
+      <span class="tag active">Active</span>
+      <span class="tag wip">In progress</span>
+      <span class="tag plan">Planned</span>
+    </p>
+
+    <ul class="rows" aria-label="Planned core research projects">
+      <li><div><h3>Urdu-RomanX</h3><span class="tag plan">Planned</span></div><p>Do models understand Urdu script, Roman Urdu and Urdu-English text equally well?</p></li>
+      <li><div><h3>UrduQA-Reason</h3><span class="tag plan">Planned</span></div><p>Can AI answer with evidence and multi-step reasoning, and say so when no answer exists?</p></li>
+      <li><div><h3>UrduCodeSwitch-Bench</h3><span class="tag plan">Planned</span></div><p>How reliable and safe is AI across different forms of the same language?</p></li>
+      <li><div><h3>UrduIE-KG</h3><span class="tag plan">Planned</span></div><p>Can we extract people, places, laws and relations from Urdu text?</p></li>
+      <li><div><h3>PAKGOV-RAG-X</h3><span class="tag plan">Planned</span></div><p>Can AI answer Pakistani government questions with real, checkable sources? This is the planned research upgrade of the current PAKGOV-RAG prototype.</p></li>
+    </ul>
+    <p class="hint" style="margin-top:var(--s2)">Wider interests: Nastaliq text processing, bilingual embeddings, code-switching, and low-resource fine-tuning with models such as mBERT, XLM-RoBERTa and mT5. Stretch work on RAG reliability benchmarks follows only after the core projects.</p>
+  </div>
 </section>
 
-<section class="pg" id="projects">
-<h2>Projects</h2><div class="fl" id="pf"></div><div class="grid" id="pg"></div>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" aria-labelledby="h-projects">
+  <div class="container">
+    <div class="head">
+      <h2 id="h-projects">Projects</h2>
+      <p>One flagship case study, followed by the other repositories pinned on my GitHub profile.</p>
+    </div>
+
+    <article class="case" aria-labelledby="h-pakgov">
+      <div class="case-top">
+        <h3 id="h-pakgov">PAKGOV-RAG</h3>
+        <span class="tag wip">In progress</span>
+        <span class="tag plan">Version 0 pilot</span>
+      </div>
+      <p>A bilingual Urdu-English retrieval-augmented generation system for Pakistani government and legal documents.</p>
+
+      <dl class="facts">
+        <div class="wide">
+          <dt>The problem</dt>
+          <dd>Official information such as tax circulars, education policy, identity procedures, company filings and court judgments is spread across many documents and is hard for Urdu readers to search. Answers from general AI tools may sound confident without pointing to the source document.</dd>
+        </div>
+        <div>
+          <dt>Why it matters</dt>
+          <dd>People should be able to ask in the language they actually write, and check the answer against an official source.</dd>
+        </div>
+        <div>
+          <dt>Document areas targeted</dt>
+          <dd>FBR circulars, HEC policy, NADRA procedures, SECP filings and Supreme Court judgments. Source links and document IDs are kept with each document.</dd>
+        </div>
+        <div class="wide">
+          <dt>Approach</dt>
+          <dd>
+            The repository describes four components, shown below in the order a document passes through them.
+            <ol class="pipe">
+              <li><b>OCR</b>Turn scanned documents into text.</li>
+              <li><b>Hybrid retrieval</b>Combine dense and keyword search to find passages.</li>
+              <li><b>Citation grounding</b>Tie each answer to the passages it used.</li>
+              <li><b>Evaluation</b>Measure retrieval and answer quality.</li>
+            </ol>
+            <p class="pipe-note">Components are taken from the repository description. Detailed architecture notes will be added as they are written up.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>Technologies in use now</dt>
+          <dd>Python, Git, FAISS and LangChain. I am still learning PyTorch and Hugging Face, so I do not list them as part of the working system.</dd>
+        </div>
+        <div>
+          <dt>Planned evaluation</dt>
+          <dd>Recall@5, Recall@10, MRR, nDCG, answer correctness, groundedness, citation precision and recall, unsupported claims, hallucination, abstention, speed and cost.</dd>
+        </div>
+        <div>
+          <dt>Measured results</dt>
+          <dd>None published yet. I will add numbers here only after the evaluation has actually been run, with the method and dataset described.</dd>
+        </div>
+        <div>
+          <dt>Known limitations</dt>
+          <dd>This is a pilot, not a production service. It gives no legal advice and I make no claim of legal accuracy.</dd>
+        </div>
+        <div class="wide">
+          <dt>Next steps</dt>
+          <dd>Upgrade step by step into PAKGOV-RAG-X: retrieval metrics, source grounding, an evaluation set, and a written technical report.</dd>
+        </div>
+      </dl>
+
+      <div class="case-links">
+        <a class="btn" href="https://github.com/salikhussain71-code/PAKGOV-RAG-project" target="_blank" rel="noopener noreferrer">Open the repository</a>
+      </div>
+    </article>
+
+    <h3 id="h-others" style="margin-bottom:var(--s2)">Other repositories</h3>
+    <ul class="rows" aria-labelledby="h-others">
+      <li>
+        <div><h3><a href="https://github.com/salikhussain71-code/python-learning-log" target="_blank" rel="noopener noreferrer">python-learning-log</a></h3></div>
+        <div><p>Daily Python practice, programming fundamentals, algorithms and projects, documenting my progress from beginner to proficient.</p><ul class="chips"><li>Python</li></ul></div>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/salikhussain71-code/MS-AI-Admission-Eligibility-Engine" target="_blank" rel="noopener noreferrer">MS-AI-Admission-Eligibility-Engine</a></h3></div>
+        <div><p>A reproducible, source-grounded engine that models program-specific admission requirements from official university sources and validates applicant inputs.</p><ul class="chips"><li>Python</li></ul></div>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/salikhussain71-code/urdu-en-word-analyzer" target="_blank" rel="noopener noreferrer">urdu-en-word-analyzer</a></h3></div>
+        <div><p>Bilingual text analyzer for English and Roman Urdu text, with word-frequency analysis, UTF-8 support and CSV output.</p><ul class="chips"><li>Python</li></ul></div>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/salikhussain71-code/Pakgov-search-cli" target="_blank" rel="noopener noreferrer">Pakgov-search-cli</a></h3></div>
+        <div><p>Command-line tool for fast keyword search across Pakistani government documents, with contextual results, search history, error handling and modular file processing.</p><ul class="chips"><li>Python</li></ul></div>
+      </li>
+      <li>
+        <div><h3><a href="https://github.com/salikhussain71-code/ml-paper-reproductions" target="_blank" rel="noopener noreferrer">ml-paper-reproductions</a></h3></div>
+        <div><p>Reproducing landmark machine learning papers from scratch, including Attention Is All You Need and BERT.</p></div>
+      </li>
+    </ul>
+    <p style="margin-top:var(--s2)"><a href="https://github.com/salikhussain71-code?tab=repositories" target="_blank" rel="noopener noreferrer">See all repositories on GitHub</a></p>
+  </div>
 </section>
 
-<section class="pg" id="research">
-<h2>Research</h2>
-<div class="flag"><span class="mono">Flagship project</span><h3 style="margin:6px 0">PAKGOV-RAG</h3><p class="sub" style="margin:0 0 12px">A bilingual Urdu-English retrieval-augmented generation engine for Pakistani government documents: FBR circulars, HEC policy, NADRA procedures, SECP filings and Supreme Court judgments. It combines hybrid dense and sparse retrieval (FAISS and BM25) with a QLoRA fine-tuned bilingual generator, evaluated with RAGAS on faithfulness, answer relevance, context precision and context recall.</p><div class="tags"><span>Python</span><span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>PyTorch</span><span>FastAPI</span></div><p style="margin-top:12px"><a class="l" href="https://github.com/salikhussain71-code/pakgov-rag" target="_blank" rel="noopener">View repository</a></p></div>
-<h3 style="margin:26px 0 12px">Planned papers</h3><div class="grid" id="papers"></div>
-<p class="sub" style="margin-top:20px">Research interests: Nastaliq text processing, bilingual embeddings, code-switching and low-resource fine-tuning (mBERT, XLM-RoBERTa, mT5). Experience and publications will be listed here as soon as they happen.</p>
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications" aria-labelledby="h-pubs">
+  <div class="container">
+    <div class="head">
+      <h2 id="h-pubs">Research and publications</h2>
+      <p>I have no peer-reviewed publications yet. A paper is an outcome, not a guarantee, and I will not submit work only to reach a number. All papers below are Planned.</p>
+    </div>
+
+    <div class="scroll" role="region" aria-label="Planned papers table, scrollable" tabindex="0">
+      <table>
+        <caption>Planned core papers</caption>
+        <thead><tr><th scope="col">Working title</th><th scope="col">Builds on</th><th scope="col">Target timing</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Urdu-RomanX: Robust Representation Learning Across Urdu, Roman Urdu and Urdu-English Text</th><td>Urdu-RomanX</td><td>Draft in year 2, submit in year 3</td><td><span class="tag plan">Planned</span></td></tr>
+          <tr><th scope="row">UrduCodeSwitch-Bench: Reliability, Factuality and Safety Evaluation Across Urdu, Roman Urdu and Code-Switched Text</th><td>UrduCodeSwitch-Bench</td><td>Years 3 to 4</td><td><span class="tag plan">Planned</span></td></tr>
+          <tr><th scope="row">PAKGOV-RAG-X: Evidence-Grounded Bilingual RAG for Pakistani Government and Public Information</th><td>PAKGOV-RAG-X</td><td>Year 4</td><td><span class="tag plan">Planned</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint" style="margin-top:var(--s2)">Venues are chosen only after the real contribution is clear. My research identity is on <a href="https://orcid.org/0009-0002-2163-1728" target="_blank" rel="noopener noreferrer">ORCID</a> (0009-0002-2163-1728).</p>
+  </div>
 </section>
 
-<section class="pg" id="about">
-<h2>About</h2>
-<p class="sub">I am 18, from Kurram District, studying BS Computer Science in Islamabad. I started in pre-medical (F.Sc. PCB), then moved to computer science because I saw how hard it is for Urdu readers to use government information. I build practical tools, learn in public and aim for a fully funded MS in AI abroad (MBZUAI, KAUST, ETH Zurich, EPFL, TU Munich). Freelance work lets me practise on real problems while I study.</p>
-<div class="tl" id="tl"></div>
-<h2>Skills</h2><div id="sk"></div>
-<h2>Credentials</h2><div class="grid" id="cr"></div>
+<!-- ================= SKILLS ================= -->
+<section id="skills" aria-labelledby="h-skills">
+  <div class="container">
+    <div class="head">
+      <h2 id="h-skills">Technical skills</h2>
+      <p>Grouped by how far along I am, so you can see what I can use today and what I am still building.</p>
+    </div>
+    <div class="skills">
+      <div>
+        <h3>Working knowledge</h3>
+        <p>Used in projects or certified.</p>
+        <ul class="chips"><li>Python</li><li>C</li><li>SQL</li><li>HTML and CSS</li><li>JavaScript (basic)</li><li>Git and GitHub</li><li>Linux</li><li>FAISS</li><li>LangChain</li><li>REST APIs</li></ul>
+      </div>
+      <div>
+        <h3>Learning now</h3>
+        <p>Studied or in early use.</p>
+        <ul class="chips"><li>C++</li><li>PyTorch</li><li>Hugging Face</li><li>NumPy and pandas</li><li>Calculus</li><li>Linear algebra</li><li>Probability</li></ul>
+      </div>
+      <div>
+        <h3>Planned next</h3>
+        <p>Scheduled in my study plan.</p>
+        <ul class="chips"><li>scikit-learn</li><li>Transformers and embeddings</li><li>RAG evaluation</li><li>FastAPI</li><li>Docker</li><li>Experiment tracking</li></ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="pg" id="contact">
-<h2>Start a project</h2><p class="sub">Tell me what you need, your deadline and a rough budget. I reply within 24 hours.</p>
-<p><a class="btn" id="wa" style="display:none" target="_blank" rel="noopener">Message on WhatsApp</a><a class="btn o" href="mailto:salikhussain71@gmail.com">salikhussain71@gmail.com</a><a class="btn o" id="up" style="display:none" target="_blank" rel="noopener">Upwork profile</a><a class="btn o" id="fv" style="display:none" target="_blank" rel="noopener">Fiverr profile</a></p>
-<form id="f" novalidate>
-<label class="f">Name<input id="n" autocomplete="name"><span class="err" id="en"></span></label>
-<label class="f">Your email<input id="e" type="email" autocomplete="email"><span class="err" id="ee"></span></label>
-<label class="f">Project type<select id="t"><option>Python automation</option><option>Website</option><option>AI chatbot or document search</option><option>Data cleaning and analysis</option><option>Urdu or English text processing</option><option>Other</option></select></label>
-<label class="f">Details<textarea id="m" rows="5"></textarea><span class="err" id="em"></span></label>
-<button class="btn" type="submit" style="justify-self:start">Send enquiry</button>
-</form>
+<!-- ================= BACKGROUND ================= -->
+<section id="background" aria-labelledby="h-bg">
+  <div class="container split">
+    <div>
+      <div class="head" style="margin-bottom:var(--s3)">
+        <h2 id="h-bg">Background</h2>
+      </div>
+      <p>I am from Kurram District and study in Islamabad. I started in pre-medical (F.Sc. PCB), then moved to computer science because I saw how hard it is for Urdu readers to use government information.</p>
+      <p>I build practical tools, learn in public, and aim for a fully funded MS in AI abroad. Freelance work lets me practise on real problems while I study. Targets on this page are goals, not achievements.</p>
+      <h3 style="margin:var(--s3) 0 .5rem">Education</h3>
+      <ul style="list-style:none">
+        <li style="padding:.5rem 0;border-top:1px solid var(--line-strong)"><b>BS Computer Science</b>, Iqra University Islamabad<br><span class="muted">Started October 2026. Fall 2026 courses: Programming Fundamentals (C++), Application of ICT, Functional English, Applied Physics, Pre-Calculus I.</span></li>
+        <li style="padding:.5rem 0;border-top:1px solid var(--line)"><b>F.Sc. Pre-Medical</b><br><span class="muted">HSSC 71.18 percent, completed August 2026.</span></li>
+        <li style="padding:.5rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><b>SSC</b><br><span class="muted">83.27 percent.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-bottom:var(--s2)">Study plan</h3>
+      <p class="muted" style="font-size:.9375rem">A plan, not a record. Dates move if grades or opportunities change.</p>
+      <ol class="plan">
+        <li><b>Year 1, 2026 to 2027</b><span>Strong grades, solid C++ and calculus, daily Git habit, first research reading, and a review of the PAKGOV-RAG version 0 prototype.</span></li>
+        <li><b>Year 2, 2027 to 2028</b><span>Data structures, algorithms and machine learning basics. Finish the first Urdu NLP research project and draft the first paper.</span></li>
+        <li><b>Year 3, 2028 to 2029</b><span>AI core courses, an Urdu code-switching benchmark, research internship applications and English test preparation.</span></li>
+        <li><b>Year 4, 2029 to 2030</b><span>PAKGOV-RAG-X as the final-year project and MS applications for fully funded programs. No one can promise admission.</span></li>
+      </ol>
+    </div>
+  </div>
 </section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section id="credentials" aria-labelledby="h-cred">
+  <div class="container">
+    <div class="head">
+      <h2 id="h-cred">Credentials</h2>
+      <p>24 courses and assessments are listed. Certificates show learning. They are not research results. Where a public verification link exists, it is linked.</p>
+    </div>
+
+    <div class="scroll" role="region" aria-label="Course certificates table, scrollable" tabindex="0" style="margin-bottom:var(--s4)">
+      <table>
+        <caption>University and platform courses, issued August and September 2026</caption>
+        <thead><tr><th scope="col">Course</th><th scope="col">Provider</th><th scope="col">Issued</th><th scope="col">Verification</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">CS50x: Introduction to Computer Science</th><td>Harvard</td><td>Aug 2026</td><td class="muted">Link not added yet</td></tr>
+          <tr><th scope="row">CS50 Artificial Intelligence with Python</th><td>Harvard</td><td>Aug 2026</td><td class="muted">Link not added yet</td></tr>
+          <tr><th scope="row">CS50 Databases with SQL</th><td>Harvard</td><td>Aug 2026</td><td class="muted">Link not added yet</td></tr>
+          <tr><th scope="row">CS50 Introduction to Cybersecurity</th><td>Harvard</td><td>Sep 2026</td><td class="muted">Link not added yet</td></tr>
+          <tr><th scope="row">Artificial Intelligence Fundamentals<br><span class="mono muted">ID bfe0dc1d-e245-444b-b046-c4d620b16bd2</span></th><td>IBM SkillsBuild</td><td>Sep 2026</td><td><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">On LinkedIn</a></td></tr>
+          <tr><th scope="row">Getting Started with Generative AI<br><span class="mono muted">ID PWID-B1036800</span></th><td>IBM SkillsBuild</td><td>Sep 2026</td><td><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">On LinkedIn</a></td></tr>
+          <tr><th scope="row">Machine Learning Crash Course (numerical data module)</th><td>Google</td><td>Sep 2026</td><td><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">On LinkedIn</a></td></tr>
+          <tr><th scope="row">Introduction to Programming in C</th><td>The Open University</td><td>Sep 2026</td><td><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">On LinkedIn</a></td></tr>
+          <tr><th scope="row">Elements of AI (2 ECTS)<br><span class="mono muted">ID vh5jd0sod38</span></th><td>University of Helsinki</td><td>Aug 2026</td><td><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">On LinkedIn</a></td></tr>
+          <tr><th scope="row">Claude Platform 101</th><td>Anthropic</td><td>Aug 2026</td><td><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">On LinkedIn</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scroll" role="region" aria-label="Skill assessments and other credentials table, scrollable" tabindex="0">
+      <table>
+        <caption>Skill assessments and other credentials</caption>
+        <thead><tr><th scope="col">Credential</th><th scope="col">Provider</th><th scope="col">Verification</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">CS50's Introduction to Programming with Python</th><td>Harvard</td><td><a href="https://cs50.harvard.edu/certificates/ec4d3f24-6d4b-4cba-bc09-7cfae8bf778a" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">Problem Solving (Intermediate)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/4cd35bd7e556" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">Problem Solving (Basic)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/5b5ccf0b4211" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">Python (Basic)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/ac3fe144a4cd" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">SQL (Advanced)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/c3f0e29b7368" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">SQL (Intermediate)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/eceac0ebd444" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">SQL (Basic)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/3cc6cdfa1e81" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">REST API (Intermediate)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/16bc1e22871d" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">JavaScript (Basic)</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/cacb7f1ae804" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">Software Engineer role certificate</th><td>HackerRank</td><td><a href="https://www.hackerrank.com/certificates/a4b2b72f8247" target="_blank" rel="noopener noreferrer">Verify certificate</a></td></tr>
+          <tr><th scope="row">Scientific Computing with Python</th><td>freeCodeCamp</td><td class="muted">No public link yet</td></tr>
+          <tr><th scope="row">Introduction to LLMs</th><td>SoloLearn</td><td class="muted">No public link yet</td></tr>
+          <tr><th scope="row">Machine Learning for Beginners</th><td>SoloLearn</td><td class="muted">No public link yet</td></tr>
+          <tr><th scope="row">HP LIFE Ambassador</th><td>HP LIFE</td><td class="muted">No public link yet</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint" style="margin-top:var(--s2)">Practice profiles: <a href="https://leetcode.com/u/salikhussain71/" target="_blank" rel="noopener noreferrer">LeetCode</a>, <a href="https://www.hackerrank.com/profile/salikhussain71" target="_blank" rel="noopener noreferrer">HackerRank</a> and <a href="https://www.kaggle.com/salikhussain" target="_blank" rel="noopener noreferrer">Kaggle</a>.</p>
+  </div>
+</section>
+
+<!-- ================= FREELANCE ================= -->
+<section id="services" aria-labelledby="h-services">
+  <div class="container">
+    <div class="head">
+      <h2 id="h-services">Freelance work</h2>
+      <p>Fixed-scope work with a written quote before I start. You approve each stage before the next begins. Studies come first, so I take only projects I can deliver well.</p>
+    </div>
+
+    <ul class="rows" aria-label="Services">
+      <li><div><h3>Python automation</h3></div><div><p>Scripts that clean files, collect public data, send reports and save manual work.</p><ul class="chips"><li>Python</li><li>Pandas</li><li>APIs</li></ul></div></li>
+      <li><div><h3>Websites</h3></div><div><p>Fast, responsive business and portfolio sites with clear copy and working contact forms.</p><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div></li>
+      <li><div><h3>AI chatbot and document search</h3></div><div><p>Ask questions over your PDFs and documents in English or Urdu, with the source shown for each answer.</p><ul class="chips"><li>RAG</li><li>LangChain</li><li>FAISS</li></ul></div></li>
+      <li><div><h3>Data cleaning and analysis</h3></div><div><p>Turn messy spreadsheets and CSV files into clean data and clear charts.</p><ul class="chips"><li>SQL</li><li>Pandas</li></ul></div></li>
+      <li><div><h3>Urdu and English text work</h3></div><div><p>Search, classification and processing for Urdu text, including Nastaliq documents.</p><ul class="chips"><li>NLP</li></ul></div></li>
+    </ul>
+
+    <h3 style="margin:var(--s4) 0 var(--s2)">How we work</h3>
+    <ol class="process">
+      <li><b>Brief</b><p>Tell me what you need. I reply with questions and a fixed quote within 24 hours.</p></li>
+      <li><b>Build</b><p>I share short progress updates so you see work early, not only at the end.</p></li>
+      <li><b>Review</b><p>You test it and request changes. Revisions are included in the agreed scope.</p></li>
+      <li><b>Deliver</b><p>Clean code, a short guide and a handover. I stay available for fixes afterwards.</p></li>
+    </ol>
+
+    <h3 style="margin-bottom:var(--s2)">Questions clients ask</h3>
+    <details><summary>Are you experienced enough?</summary><p>I am a first-year BS CS student with certificates in Python, SQL, REST APIs and JavaScript, and an AI project on GitHub. I tell you early if something is outside my skills.</p></details>
+    <details><summary>How fast can you start?</summary><p>Usually within two to three days of agreeing the scope. Small projects can finish within a week.</p></details>
+    <details><summary>How do we communicate and pay?</summary><p>Email, WhatsApp or the platform you prefer. Payment goes through Upwork, Fiverr or an agreed method, with milestones for larger work.</p></details>
+    <details><summary>Do you work with Urdu content?</summary><p>Yes. Urdu and English text processing, Urdu search and Urdu-English document question answering are my focus.</p></details>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" aria-labelledby="h-contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="head" style="margin-bottom:var(--s3)">
+        <h2 id="h-contact">Contact</h2>
+        <p>For research advice, supervision enquiries or freelance work, email me. I reply within 24 hours.</p>
+      </div>
+      <p><a class="btn" href="mailto:salikhussain71@gmail.com">Email me</a></p>
+      <p class="mono" style="overflow-wrap:anywhere">salikhussain71@gmail.com</p>
+      <div class="actions" style="margin-top:var(--s2)">
+        <a class="btn alt" id="wa" href="#contact" target="_blank" rel="noopener noreferrer" hidden>Message on WhatsApp</a>
+        <a class="btn alt" id="up" href="#contact" target="_blank" rel="noopener noreferrer" hidden>Upwork profile</a>
+        <a class="btn alt" id="fv" href="#contact" target="_blank" rel="noopener noreferrer" hidden>Fiverr profile</a>
+      </div>
+      <h3 style="margin:var(--s4) 0 var(--s2)">Profiles</h3>
+      <ul class="links">
+        <li><span>GitHub</span><a href="https://github.com/salikhussain71-code" target="_blank" rel="noopener noreferrer">salikhussain71-code</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">salik-hussain-7822a1388</a></li>
+        <li><span>ORCID</span><a href="https://orcid.org/0009-0002-2163-1728" target="_blank" rel="noopener noreferrer">0009-0002-2163-1728</a></li>
+        <li><span>Kaggle</span><a href="https://www.kaggle.com/salikhussain" target="_blank" rel="noopener noreferrer">salikhussain</a></li>
+        <li><span>LeetCode</span><a href="https://leetcode.com/u/salikhussain71/" target="_blank" rel="noopener noreferrer">salikhussain71</a></li>
+        <li><span>HackerRank</span><a href="https://www.hackerrank.com/profile/salikhussain71" target="_blank" rel="noopener noreferrer">salikhussain71</a></li>
+        <li><span>X</span><a href="https://x.com/salikhussain71" target="_blank" rel="noopener noreferrer">@salikhussain71</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:.5rem">Send an enquiry</h3>
+      <p class="hint">This opens your email app with the message filled in. Nothing is sent from this page until you press send in your email app.</p>
+      <form id="f" novalidate style="margin-top:var(--s2)">
+        <label for="n">Name
+          <input id="n" name="name" autocomplete="name" aria-describedby="en">
+          <span class="err" id="en" aria-live="polite"></span>
+        </label>
+        <label for="e">Your email
+          <input id="e" name="email" type="email" autocomplete="email" aria-describedby="ee">
+          <span class="err" id="ee" aria-live="polite"></span>
+        </label>
+        <label for="t">Project type
+          <select id="t" name="type">
+            <option>Python automation</option>
+            <option>Website</option>
+            <option>AI chatbot or document search</option>
+            <option>Data cleaning and analysis</option>
+            <option>Urdu or English text processing</option>
+            <option>Research advice or supervision</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label for="m">Details, deadline and rough budget
+          <textarea id="m" name="message" rows="5" aria-describedby="em"></textarea>
+          <span class="err" id="em" aria-live="polite"></span>
+        </label>
+        <div><button class="btn" type="submit">Open email draft</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
-<button class="btn" id="top" aria-label="Back to top">Top</button>
-<div id="pal" role="dialog" aria-label="Quick jump"><div id="pl"></div></div>
+
 <footer>
-<a href="https://github.com/salikhussain71-code" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.kaggle.com/salikhussain" target="_blank" rel="noopener">Kaggle</a><a href="https://leetcode.com/u/salikhussain71/" target="_blank" rel="noopener">LeetCode</a><a href="https://www.hackerrank.com/profile/salikhussain71" target="_blank" rel="noopener">HackerRank</a><a href="https://x.com/salikhussain71" target="_blank" rel="noopener">X</a><a href="https://orcid.org/0009-0002-2163-1728" target="_blank" rel="noopener">ORCID</a>
-<p style="margin-top:10px">Built with care in Pakistan.</p></footer>
+  <div class="container">
+    <ul>
+      <li><a href="https://github.com/salikhussain71-code" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://orcid.org/0009-0002-2163-1728" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+      <li><a href="https://www.kaggle.com/salikhussain" target="_blank" rel="noopener noreferrer">Kaggle</a></li>
+      <li><a href="https://leetcode.com/u/salikhussain71/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+      <li><a href="https://www.hackerrank.com/profile/salikhussain71" target="_blank" rel="noopener noreferrer">HackerRank</a></li>
+      <li><a href="https://x.com/salikhussain71" target="_blank" rel="noopener noreferrer">X</a></li>
+    </ul>
+    <p>Salik Hussain, Rawalpindi, Pakistan. Last updated October 2026.</p>
+  </div>
+</footer>
 
 <script>
-/* EDIT HERE: add your links. Empty values stay hidden. WhatsApp format: 923001234567 */
-var CFG={whatsapp:"",upwork:"",fiverr:""};
-var $=function(i){return document.getElementById(i)};
-var PAGES=[["home","Home"],["services","Services"],["projects","Projects"],["research","Research"],["about","About"],["contact","Contact"]];
-var SV=[["Python automation","Scripts that clean files, scrape public data, send reports and save hours of manual work.",["Python","Pandas","APIs"]],["Websites","Fast, responsive business and portfolio sites with clear copy and contact forms.",["HTML","CSS","JavaScript"]],["AI chatbot and document search","Ask questions over your PDFs and documents, in English or Urdu, with sources shown.",["RAG","LangChain","FAISS"]],["Data cleaning and analysis","Turn messy spreadsheets and CSVs into clean data and clear charts.",["SQL","Pandas","Kaggle"]],["Urdu and English text work","Search, classification and processing for Urdu text, including Nastaliq documents.",["NLP","Transformers"]]];
-var PR=[
-{n:"PAKGOV-RAG",c:"AI",s:"Active",d:"Bilingual Urdu-English RAG for Pakistani government documents, with hybrid retrieval and RAGAS evaluation.",t:["Python","FAISS","LangChain"],g:"https://github.com/salikhussain71-code/pakgov-rag"},
-{n:"Urdu text classifier",c:"AI",s:"Planned",d:"Sentiment and topic classification with a transformer baseline and a benchmark table.",t:["XLM-R","PyTorch"]},
-{n:"Urdu OCR and search",c:"Data",s:"Planned",d:"Reads scanned Nastaliq documents and makes them searchable.",t:["OCR","Python"]},
-{n:"Study dashboard",c:"Web",s:"Planned",d:"Progress tracker for weekly study hours, courses and GPA goals.",t:["JavaScript","Web"]},
-{n:"This portfolio",c:"Web",s:"Active",d:"Open-source personal site hosted on GitHub Pages.",t:["HTML","CSS","JS"],g:"https://github.com/salikhussain71-code"}];
-var PAP=[["Urdu RAG benchmark for government documents","In progress","Target: ACL SANLP Workshop"],["Low-resource Urdu dataset and evaluation","Idea","Collect, clean and evaluate public-sector Urdu text"],["Efficient fine-tuning for Urdu LLMs","Idea","QLoRA and adapter methods on small hardware"]];
-var TL=[["Aug 2026","F.Sc. Pre-Medical complete","SSC 83.27%, HSSC 71.18%"],["Oct 2026","BS Computer Science begins","Iqra University Islamabad"],["Year 1","Foundations and freelancing start","C, Python, first client projects, PAKGOV-RAG prototype"],["Year 2","Core CS and machine learning","Algorithms, ML, research internship search"],["Year 3","Research and internships","First paper submission"],["Year 4","MS applications","Scholarships: MBZUAI, KAUST, ETH, EPFL, TUM"]];
-var SK=[["Languages",["Python","C++","SQL","JavaScript","Bash","LaTeX"]],["ML and NLP",["PyTorch","HuggingFace","LangChain","FAISS","Scikit-Learn","NumPy","Pandas"]],["Tools",["Git","GitHub Actions","Docker","FastAPI","Neo4j","Linux","Gradio"]],["Mathematics",["Linear Algebra","Calculus","Probability","Optimization"]]];
-var CR=[["CS50's Introduction to Programming with Python","Harvard University","https://cs50.harvard.edu/certificates/ec4d3f24-6d4b-4cba-bc09-7cfae8bf778a"],["Scientific Computing with Python","freeCodeCamp",""],["Problem Solving (Intermediate)","HackerRank","https://www.hackerrank.com/certificates/4cd35bd7e556"],["Problem Solving (Basic)","HackerRank","https://www.hackerrank.com/certificates/5b5ccf0b4211"],["Python (Basic)","HackerRank","https://www.hackerrank.com/certificates/ac3fe144a4cd"],["SQL (Advanced)","HackerRank","https://www.hackerrank.com/certificates/c3f0e29b7368"],["SQL (Intermediate)","HackerRank","https://www.hackerrank.com/certificates/eceac0ebd444"],["SQL (Basic)","HackerRank","https://www.hackerrank.com/certificates/3cc6cdfa1e81"],["REST API (Intermediate)","HackerRank","https://www.hackerrank.com/certificates/16bc1e22871d"],["JavaScript (Basic)","HackerRank","https://www.hackerrank.com/certificates/cacb7f1ae804"],["Software Engineer role certificate","HackerRank","https://www.hackerrank.com/certificates/a4b2b72f8247"],["Introduction to LLMs","SoloLearn",""],["Machine Learning for Beginners","SoloLearn",""],["HP LIFE Ambassador","HP LIFE",""]];
-function card(p){return '<div class="card"><span class="chip '+(p.s==="Active"?"a":"p")+'">'+p.s+'</span><h3>'+p.n+'</h3><p>'+p.d+'</p><div class="tags">'+p.t.map(function(x){return"<span>"+x+"</span>"}).join("")+'</div>'+(p.g?'<a class="l" href="'+p.g+'" target="_blank" rel="noopener">GitHub</a>':'')+'</div>'}
-$("nav").innerHTML=PAGES.map(function(p){return '<button data-go="'+p[0]+'">'+p[1]+'</button>'}).join("");
-$("pl").innerHTML=$("nav").innerHTML;
-$("feat").innerHTML=PR.slice(0,3).map(card).join("");
-$("sv").innerHTML=SV.map(function(s){return '<div class="card"><h3>'+s[0]+'</h3><p>'+s[1]+'</p><div class="tags">'+s[2].map(function(x){return"<span>"+x+"</span>"}).join("")+'</div><a class="l" href="#" data-go="contact">Request a quote</a></div>'}).join("");
-$("tl").innerHTML=TL.map(function(x){return '<div><small>'+x[0]+'</small><b>'+x[1]+'</b><p style="color:var(--mute);font-size:.9rem">'+x[2]+'</p></div>'}).join("");
-$("papers").innerHTML=PAP.map(function(x){return '<div class="card"><span class="chip p">'+x[1]+'</span><h3>'+x[0]+'</h3><p>'+x[2]+'</p></div>'}).join("");
-$("sk").innerHTML=SK.map(function(g){return '<div class="lv">'+g[0]+'</div><div class="pills">'+g[1].map(function(x){return"<span>"+x+"</span>"}).join("")+'</div>'}).join("");
-$("cr").innerHTML=CR.map(function(c){return '<div class="card"><h3 style="font-size:1.05rem">'+c[0]+'</h3><p>'+c[1]+'</p>'+(c[2]?'<a class="l" href="'+c[2]+'" target="_blank" rel="noopener">View credential</a>':'')+'</div>'}).join("");
-var cat="All",cats=["All","AI","Data","Web"];
-function rp(){$("pf").innerHTML=cats.map(function(c){return '<button data-f="'+c+'" class="'+(c===cat?"on":"")+'">'+c+'</button>'}).join("");$("pg").innerHTML=PR.filter(function(p){return cat==="All"||p.c===cat}).map(card).join("")}rp();
-if(CFG.whatsapp){$("wa").href="https://wa.me/"+CFG.whatsapp;$("wa").style.display="inline-block"}
-if(CFG.upwork){$("up").href=CFG.upwork;$("up").style.display="inline-block"}
-if(CFG.fiverr){$("fv").href=CFG.fiverr;$("fv").style.display="inline-block"}
-function go(id){if(!$(id))id="home";document.querySelectorAll(".pg").forEach(function(p){p.classList.toggle("on",p.id===id)});document.querySelectorAll("nav button").forEach(function(b){if(b.dataset.go===id)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});$("pal").classList.remove("on");window.scrollTo(0,0);try{history.replaceState(null,"","#"+id)}catch(e){}}
-document.addEventListener("click",function(e){var t=e.target.closest("[data-go]");if(t){e.preventDefault();go(t.dataset.go);return}var f=e.target.closest("[data-f]");if(f){cat=f.dataset.f;rp()}});
-function pal(o){$("pal").classList.toggle("on",o);if(o)$("pl").firstChild.focus()}
-$("kb").onclick=function(){pal(true)};$("pal").onclick=function(e){if(e.target===$("pal"))pal(false)};
-document.addEventListener("keydown",function(e){if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();pal(!$("pal").classList.contains("on"))}if(e.key==="Escape")pal(false)});
-$("th").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark";try{localStorage.setItem("th",r.dataset.theme)}catch(e){}};
-try{var s=localStorage.getItem("th");if(s)document.documentElement.dataset.theme=s}catch(e){}
-var pts=[[60,50],[240,50],[40,150],[260,150],[80,220],[220,220],[150,40],[150,225]],o="";
-pts.forEach(function(p){o+='<line x1="150" y1="130" x2="'+p[0]+'" y2="'+p[1]+'" stroke="var(--line)" stroke-width="1.5"/>'});
-pts.forEach(function(p,i){o+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7" fill="var(--pri)"><animate attributeName="opacity" values="1;.3;1" dur="'+(2+i*.3)+'s" repeatCount="indefinite"/></circle>'});
-$("ng").innerHTML=o;
-var W=["اردو","Urdu","زبان","NLP"],wi=0;if(!matchMedia("(prefers-reduced-motion:reduce)").matches)setInterval(function(){wi=(wi+1)%W.length;$("gl").textContent=W[wi]},1800);
-addEventListener("scroll",function(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);$("bar").style.width=p*100+"%";$("top").style.display=h.scrollTop>500?"block":"none"});
-$("top").onclick=function(){window.scrollTo(0,0)};
-$("f").addEventListener("submit",function(e){e.preventDefault();var n=$("n").value.trim(),m=$("m").value.trim(),em=$("e").value.trim(),ok=/^\S+@\S+\.\S+$/.test(em);
-$("en").textContent=n?"":"Enter your name.";$("ee").textContent=ok?"":"Enter a valid email.";$("em").textContent=m?"":"Describe your project.";
-if(!n||!m||!ok)return;
-location.href="mailto:salikhussain71@gmail.com?subject="+encodeURIComponent($("t").value+" enquiry from "+n)+"&body="+encodeURIComponent(m+"\n\nReply to: "+em)});
-go((location.hash||"#home").slice(1));
+(function(){
+  "use strict";
+  /* EDIT HERE: add your freelance links. Empty values stay hidden.
+     WhatsApp format: digits only with country code, e.g. 923001234567 */
+  var CFG={whatsapp:"",upwork:"",fiverr:""};
+
+  var $=function(id){return document.getElementById(id)};
+  var root=document.documentElement;
+
+  /* Optional freelance links */
+  function show(id,href){var el=$(id);if(el&&href){el.href=href;el.hidden=false}}
+  show("wa",CFG.whatsapp?"https://wa.me/"+CFG.whatsapp:"");
+  show("up",CFG.upwork);
+  show("fv",CFG.fiverr);
+
+  /* Theme toggle */
+  var themeBtn=$("theme");
+  function isDark(){
+    var t=root.getAttribute("data-theme");
+    return t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function syncTheme(){themeBtn.setAttribute("aria-pressed",String(isDark()))}
+  themeBtn.addEventListener("click",function(){
+    var next=isDark()?"light":"dark";
+    root.setAttribute("data-theme",next);
+    try{localStorage.setItem("theme",next)}catch(e){}
+    syncTheme();
+  });
+  syncTheme();
+
+  /* Mobile menu */
+  var menuBtn=$("menu"),nav=$("site-nav");
+  function setMenu(open){
+    nav.classList.toggle("open",open);
+    menuBtn.setAttribute("aria-expanded",String(open));
+  }
+  menuBtn.addEventListener("click",function(){setMenu(menuBtn.getAttribute("aria-expanded")!=="true")});
+  nav.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false)});
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"&&menuBtn.getAttribute("aria-expanded")==="true"){setMenu(false);menuBtn.focus()}
+  });
+
+  /* Highlight the current section in the nav */
+  var links=[].slice.call(document.querySelectorAll(".nav a"));
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        links.forEach(function(a){
+          if(a.getAttribute("href")==="#"+en.target.id)a.setAttribute("aria-current","true");
+          else a.removeAttribute("aria-current");
+        });
+      });
+    },{rootMargin:"-40% 0px -55% 0px"});
+    links.forEach(function(a){
+      var s=document.querySelector(a.getAttribute("href"));
+      if(s)io.observe(s);
+    });
+  }
+
+  /* Enquiry form: validates, then opens a pre-filled email draft */
+  var form=$("f");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var n=$("n"),em=$("e"),m=$("m");
+    var nv=n.value.trim(),ev=em.value.trim(),mv=m.value.trim();
+    var emailOk=/^\S+@\S+\.\S+$/.test(ev);
+    function flag(field,errId,bad,msg){
+      $(errId).textContent=bad?msg:"";
+      if(bad)field.setAttribute("aria-invalid","true");else field.removeAttribute("aria-invalid");
+    }
+    flag(n,"en",!nv,"Enter your name.");
+    flag(em,"ee",!emailOk,"Enter a valid email address, for example name@example.com.");
+    flag(m,"em",!mv,"Describe what you need.");
+    if(!nv){n.focus();return}
+    if(!emailOk){em.focus();return}
+    if(!mv){m.focus();return}
+    var subject=$("t").value+" enquiry from "+nv;
+    var body=mv+"\n\nReply to: "+ev;
+    window.location.href="mailto:salikhussain71@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  });
+})();
 </script>
 </body>
 </html>
