@@ -204,6 +204,17 @@ td .mono{overflow-wrap:anywhere}
 .pipe b{display:block}
 .pipe-note{font-size:.8125rem;color:var(--mute);margin:.75rem 0 0}
 .case-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--s3)}
+.case-block{margin-top:var(--s4)}
+.case-block h4{font:600 1.15rem var(--serif);margin:0 0 var(--s1)}
+.case-block .scroll{margin-top:var(--s1)}
+.bullets{margin:.35rem 0 0 1.1rem;color:var(--mute)}
+.bullets li{margin-bottom:.25rem}
+.metrics{display:grid;gap:var(--s2);margin:var(--s2) 0 0}
+@media (min-width:640px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.metrics>div{border:1px solid var(--line-strong);border-radius:var(--r-s);padding:.75rem var(--s2);background:var(--bg)}
+.metrics dt{font-size:.8125rem;color:var(--mute)}
+.metrics dd{margin:0;font:600 1.6rem/1.2 var(--serif)}
+.metrics dd small{font:400 .8125rem var(--sans);color:var(--mute)}
 
 /* ===== Plan list (a real sequence) ===== */
 .plan{list-style:none;border-left:2px solid var(--line-strong);margin-left:.4rem;padding-left:var(--s3)}
@@ -361,7 +372,7 @@ footer a{display:inline-block;padding:.5rem 0}
         <span class="tag wip">In progress</span>
         <span class="tag plan">Version 0 pilot</span>
       </div>
-      <p>A bilingual Urdu-English retrieval-augmented generation system for Pakistani government and legal documents.</p>
+      <p>A bilingual Urdu-English retrieval-augmented generation system for Pakistani government and legal documents. Version 0 is a working retrieval pipeline over six official documents, with a FastAPI service and a first evaluation. Answer generation is not built yet.</p>
 
       <dl class="facts">
         <div class="wide">
@@ -373,41 +384,118 @@ footer a{display:inline-block;padding:.5rem 0}
           <dd>People should be able to ask in the language they actually write, and check the answer against an official source.</dd>
         </div>
         <div>
-          <dt>Document areas targeted</dt>
-          <dd>FBR circulars, HEC policy, NADRA procedures, SECP filings and Supreme Court judgments. Source links and document IDs are kept with each document.</dd>
+          <dt>Corpus built so far</dt>
+          <dd>Six official PDFs from pakistancode.gov.pk and establishment.gov.pk: 2,111 pages and about 5.6 million characters. FBR, HEC, NADRA, SECP and Supreme Court material is the planned next expansion.</dd>
         </div>
         <div class="wide">
-          <dt>Approach</dt>
+          <dt>What is built (Version 0 pipeline)</dt>
           <dd>
-            The repository describes four components, shown below in the order a document passes through them.
+            Each stage was run, committed and verified in the repository, in the order a document passes through them.
             <ol class="pipe">
-              <li><b>OCR</b>Turn scanned documents into text.</li>
-              <li><b>Hybrid retrieval</b>Combine dense and keyword search to find passages.</li>
-              <li><b>Citation grounding</b>Tie each answer to the passages it used.</li>
-              <li><b>Evaluation</b>Measure retrieval and answer quality.</li>
+              <li><b>Extraction</b>6 PDFs to 6 text files, 2,111 pages</li>
+              <li><b>Chunking</b>6,711 chunks, size 1000, overlap 200</li>
+              <li><b>Embedding</b>all-MiniLM-L6-v2, 384 dimensions, FAISS index (90.9 MB)</li>
+              <li><b>Retrieval</b>Command-line semantic search over the index</li>
+              <li><b>API</b>FastAPI service run with Uvicorn on port 8000</li>
+              <li><b>QA set</b>20 question-answer pairs built from the chunks</li>
+              <li><b>Evaluation</b>Hit@1, Hit@3 and Hit@5 on the QA set</li>
+              <li><b>Documentation</b>Final README and 9 documents in docs/</li>
             </ol>
-            <p class="pipe-note">Components are taken from the repository description. Detailed architecture notes will be added as they are written up.</p>
+            <p class="pipe-note">Check: the FAISS index holds 6,711 vectors, matching the 6,711 chunks. Example query: "Fundamental rights Pakistan Constitution?" retrieved Constitution Articles 12 to 17 and Article 19A (right to information).</p>
           </dd>
         </div>
         <div>
           <dt>Technologies in use now</dt>
-          <dd>Python, Git, FAISS and LangChain. I am still learning PyTorch and Hugging Face, so I do not list them as part of the working system.</dd>
+          <dd>Python, Git, FAISS, sentence-transformers (all-MiniLM-L6-v2), FastAPI and Uvicorn. I am still learning PyTorch and Hugging Face, so I do not list them as part of the working system.</dd>
+        </div>
+        <div>
+          <dt>Planned next</dt>
+          <dd>OCR for scanned documents, hybrid dense and keyword retrieval, citation-grounded answer generation, natural-question evaluation, and Urdu, Roman Urdu and mixed-script queries.</dd>
+        </div>
+      </dl>
+
+      <div class="case-block">
+        <h4>Measured results</h4>
+        <p class="muted">First evaluation, run with <span class="mono">python app/eval/evaluate.py</span> on 20 synthetic question-answer pairs generated from the indexed chunks (6,711 chunks, 2,111 pages).</p>
+        <dl class="metrics">
+          <div><dt>Hit@1</dt><dd>20% <small>4 of 20</small></dd></div>
+          <div><dt>Hit@3</dt><dd>25% <small>5 of 20</small></dd></div>
+          <div><dt>Hit@5</dt><dd>25% <small>5 of 20</small></dd></div>
+        </dl>
+        <p class="pipe-note">These are low scores and I publish them as they are. The questions were generated from chunk prefixes, which makes them an unnatural and hard test, and 20 questions is a very small set. The project's limitations document estimates that natural questions would score higher, but that is an estimate, not a measurement. I will report natural-question results only after I have run them.</p>
+      </div>
+
+      <div class="case-block">
+        <h4>Official sources</h4>
+        <div class="scroll" role="region" aria-label="PAKGOV-RAG official source documents table, scrollable" tabindex="0">
+          <table>
+            <caption>Six official documents, 2,111 pages in total</caption>
+            <thead><tr><th scope="col">Document</th><th scope="col">Pages</th><th scope="col">Characters</th><th scope="col">Short hash</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Constitution of Pakistan 1973</th><td>318</td><td>812k</td><td class="mono">c51d194b</td></tr>
+              <tr><th scope="row">ESTACODE 2021</th><td>307</td><td>799k</td><td class="mono">08cf1868</td></tr>
+              <tr><th scope="row">Rules of Business 1973</th><td>176</td><td>454k</td><td class="mono">bd0caf96</td></tr>
+              <tr><th scope="row">Pakistan Penal Code 1860</th><td>1,044</td><td>2.56M</td><td class="mono">0feb1c0a</td></tr>
+              <tr><th scope="row">Code of Criminal Procedure 1898</th><td>179</td><td>508k</td><td class="mono">e2cd2bb9</td></tr>
+              <tr><th scope="row">Additional Act</th><td>87</td><td>227k</td><td class="mono">4e00b563</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <h4>Build log</h4>
+        <div class="scroll" role="region" aria-label="PAKGOV-RAG build log table, scrollable" tabindex="0">
+          <table>
+            <caption>Stages 110 to 117, one commit per stage</caption>
+            <thead><tr><th scope="col">Stage</th><th scope="col">Command</th><th scope="col">Result</th><th scope="col">Commit</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">110 Extraction</th><td class="mono">python app/extract.py</td><td>6 text files, 2,111 pages, 5.6M characters</td><td class="mono">c8c73ac</td></tr>
+              <tr><th scope="row">111 Chunking</th><td class="mono">python app/chunk.py</td><td>6,711 chunks (8,206 KB), size 1000, overlap 200, saved as chunks.jsonl</td><td class="mono">e3de9f9</td></tr>
+              <tr><th scope="row">112 Embedding</th><td class="mono">python app/embed.py</td><td>6,711 vectors, 384 dimensions, 210 batches, about 25 minutes, index 90.9 MB</td><td class="mono">9c7d1c2</td></tr>
+              <tr><th scope="row">113 Retrieval</th><td class="mono">python app/query.py "..."</td><td>Relevant Constitution articles returned for a test question</td><td class="mono">42bb891</td></tr>
+              <tr><th scope="row">114 FastAPI</th><td class="mono">python -m uvicorn app.api.main:app --reload --port 8000</td><td>Status endpoint returns 200 OK with 6,711 vectors, 6,711 chunks and 2,111 pages</td><td class="mono">2b1a5e8</td></tr>
+              <tr><th scope="row">115 QA generation</th><td class="mono">python app/eval/generate_qa.py</td><td>20 QA pairs with id, question, answer, source file, chunk id and character start</td><td class="mono">52c3f46</td></tr>
+              <tr><th scope="row">116 Evaluation</th><td class="mono">python app/eval/evaluate.py</td><td>Hit@1 20%, Hit@3 25%, Hit@5 25%</td><td class="mono">47c32fa</td></tr>
+              <tr><th scope="row">117 Final README</th><td class="mono">git add, commit, pull --rebase, push</td><td>README with sources, stage evidence, run instructions, data policy and docs list</td><td class="muted">see GitHub</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <dl class="facts case-block">
+        <div>
+          <dt>Documentation in the repository</dt>
+          <dd>
+            Nine files in docs/:
+            <ul class="bullets">
+              <li>experiment-log.md</li>
+              <li>evaluation.md</li>
+              <li>methodology.md</li>
+              <li>limitations.md</li>
+              <li>data-policy.md</li>
+              <li>environment.md</li>
+              <li>dataset-card.md</li>
+              <li>error-taxonomy.md</li>
+              <li>research-problems.md</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Data policy</dt>
+          <dd>Only code and documentation are committed. The raw PDFs, the processed chunks and FAISS index, and the QA file are excluded through .gitignore.</dd>
         </div>
         <div>
           <dt>Planned evaluation</dt>
-          <dd>Recall@5, Recall@10, MRR, nDCG, answer correctness, groundedness, citation precision and recall, unsupported claims, hallucination, abstention, speed and cost.</dd>
-        </div>
-        <div>
-          <dt>Measured results</dt>
-          <dd>None published yet. I will add numbers here only after the evaluation has actually been run, with the method and dataset described.</dd>
+          <dd>Recall@5, Recall@10, MRR, nDCG, answer correctness, groundedness, citation precision and recall, unsupported claims, hallucination, abstention, speed and cost. Hit@k is the only metric measured so far.</dd>
         </div>
         <div>
           <dt>Known limitations</dt>
-          <dd>This is a pilot, not a production service. It gives no legal advice and I make no claim of legal accuracy.</dd>
+          <dd>This is a pilot, not a production service. It retrieves passages but does not generate answers yet. The evaluation set is small and synthetic. Urdu, Roman Urdu and mixed-script queries have not been tested yet. It gives no legal advice and I make no claim of legal accuracy.</dd>
         </div>
         <div class="wide">
           <dt>Next steps</dt>
-          <dd>Upgrade step by step into PAKGOV-RAG-X: retrieval metrics, source grounding, an evaluation set, and a written technical report.</dd>
+          <dd>Upgrade step by step into PAKGOV-RAG-X: a larger natural-question evaluation set, more retrieval metrics, source-grounded answers with citations, Urdu and mixed-script queries, and a written technical report.</dd>
         </div>
       </dl>
 
@@ -477,7 +565,7 @@ footer a{display:inline-block;padding:.5rem 0}
       <div>
         <h3>Working knowledge</h3>
         <p>Used in projects or certified.</p>
-        <ul class="chips"><li>Python</li><li>C</li><li>SQL</li><li>HTML and CSS</li><li>JavaScript (basic)</li><li>Git and GitHub</li><li>Linux</li><li>FAISS</li><li>LangChain</li><li>REST APIs</li></ul>
+        <ul class="chips"><li>Python</li><li>C</li><li>SQL</li><li>HTML and CSS</li><li>JavaScript (basic)</li><li>Git and GitHub</li><li>Linux</li><li>FAISS</li><li>LangChain</li><li>REST APIs</li><li>FastAPI</li><li>sentence-transformers</li></ul>
       </div>
       <div>
         <h3>Learning now</h3>
@@ -487,7 +575,7 @@ footer a{display:inline-block;padding:.5rem 0}
       <div>
         <h3>Planned next</h3>
         <p>Scheduled in my study plan.</p>
-        <ul class="chips"><li>scikit-learn</li><li>Transformers and embeddings</li><li>RAG evaluation</li><li>FastAPI</li><li>Docker</li><li>Experiment tracking</li></ul>
+        <ul class="chips"><li>scikit-learn</li><li>Transformers and embeddings</li><li>RAG evaluation</li><li>Docker</li><li>Experiment tracking</li></ul>
       </div>
     </div>
   </div>
