@@ -2,7 +2,7 @@
 
 **Live site:** [salikhussain71-code.github.io](https://salikhussain71-code.github.io)
 
-Personal research and academic profile for **Salik Hussain** — incoming BS Computer Science student at Air University Islamabad (Fall 2026), focused on low-resource Urdu NLP and retrieval-augmented generation systems.
+Personal research and academic profile for **Salik Hussain** — incoming BS Computer Science student at IQRA University Islamabad (Fall 2026), focused on low-resource Urdu NLP and retrieval-augmented generation systems.
 
 ---
 
