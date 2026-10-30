@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'self'; form-action 'none'"><meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="light dark">
+<title>Projects | Salik Hussain</title><meta name="description" content="PAKGOV-RAG case study with measured results and limits, plus change-order-extractor, ChaseLog and other repositories."><link rel="canonical" href="https://salikhussain71-code.github.io/projects.html">
+<meta property="og:type" content="website"><meta property="og:title" content="Projects | Salik Hussain"><meta property="og:description" content="PAKGOV-RAG case study with measured results and limits, plus change-order-extractor, ChaseLog and other repositories."><meta property="og:url" content="https://salikhussain71-code.github.io/projects.html">
+<meta property="og:image" content="https://salikhussain71-code.github.io/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://salikhussain71-code.github.io/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F4FD8'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23fff'%3ESH%3C/text%3E%3C/svg%3E">
+
+<script src="assets/site.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Noto+Nastaliq+Urdu&display=swap">
+<link rel="stylesheet" href="assets/site.css"></head><body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><div class="c bar"><a class="brand" href="index.html">Salik Hussain</a><nav aria-label="Primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="projects.html" aria-current="page">Projects</a></li><li><a href="record.html">Record</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<button class="ib" id="theme" type="button" aria-pressed="false">Dark mode</button></div></header>
+<main id="main"><section class="pg"><div class="c"><p class="eb">Projects</p><h1>Work with evidence</h1><p class="lede">Each project states what it does, how it was measured, and where it falls short.</p></div></section><section id="projects" style="border-top:0;padding-top:0" aria-labelledby="hp"><div class="c">
+<div class="hd"><h2 id="hp">Projects</h2><p>One flagship case study, then the repositories that back up my skills.</p></div>
+
+<article class="case" aria-labelledby="hk">
+<div class="top"><h3 id="hk">PAKGOV-RAG</h3><span class="tag wip">In progress</span></div>
+<p>A bilingual Urdu-English retrieval-augmented generation system for Pakistani government and legal documents: ingestion, chunking, multilingual embeddings, BM25 plus dense retrieval, reciprocal rank fusion, grounded generation with citations, and failure analysis.</p>
+<ol class="pipe">
+<li><b>Ingest</b>PDFs to text with PyMuPDF</li>
+<li><b>Chunk</b>6,711 chunks with page and article metadata</li>
+<li><b>Retrieve</b>BM25, dense (FAISS) and hybrid RRF, k = 60</li>
+<li><b>Answer</b>Cited answers, or "insufficient evidence"</li>
+</ol>
+<h4 style="font:600 1.1rem var(--serif);margin:1.6rem 0 .3rem">Measured results</h4>
+<p class="note">One 50-question set shared by every retriever: 15 English, 15 Urdu, 20 mixed-language. Values as reported in my 30 September 2026 write-up; the evaluation files are in the repository. The set is small, so treat the numbers as indicative, not as a benchmark.</p>
+<div class="sc" role="region" aria-label="Retriever comparison table" tabindex="0"><table>
+<caption>Retrieval quality on the 50-question set</caption>
+<thead><tr><th scope="col">Retriever</th><th scope="col">R@1</th><th scope="col">R@3</th><th scope="col">R@5</th><th scope="col">R@10</th><th scope="col">MRR</th></tr></thead>
+<tbody>
+<tr><th scope="row">BM25</th><td>0.360</td><td>0.580</td><td>0.640</td><td>0.680</td><td>0.469</td></tr>
+<tr><th scope="row">Dense (multilingual MiniLM-L12-v2, 384-d)</th><td>0.440</td><td>0.600</td><td>0.620</td><td>0.740</td><td>0.535</td></tr>
+<tr><th scope="row">Hybrid RRF</th><td>0.500</td><td>0.660</td><td>0.740</td><td>0.820</td><td>0.605</td></tr>
+</tbody></table></div>
+<dl class="met">
+<div><dt>Hybrid R@5 gain over BM25</dt><dd>+0.100</dd></div>
+<div><dt>Hybrid R@5 gain over dense</dt><dd>+0.120</dd></div>
+<div><dt>Answers with citations</dt><dd>37 / 50</dd></div>
+<div><dt>Declined: insufficient evidence</dt><dd>13 / 50</dd></div>
+</dl>
+<p class="note">Earlier pilot (Version 0): a 20-question synthetic test scored Hit@1 20% and Hit@5 25%. I keep that result because it shows what the first version could not do.</p>
+<h4 style="font:600 1.1rem var(--serif);margin:1.4rem 0 0">Limits, stated plainly</h4>
+<ul class="bl"><li>The evaluation set is small, so one retriever beating another by a few points may not hold on a larger set.</li><li>The corpus covers a limited set of official documents, and the system gives no legal advice.</li><li>Next: article-aware chunking, reranking, larger natural-question sets, broader government coverage.</li></ul>
+<ul class="chips" style="margin-top:1rem"><li>Python</li><li>sentence-transformers</li><li>FAISS</li><li>BM25</li><li>RRF</li><li>PyMuPDF</li><li>Streamlit</li></ul>
+<div class="row" style="margin-top:1.4rem"><a class="btn" href="https://github.com/salikhussain71-code/PAKGOV-RAG-project" target="_blank" rel="noopener noreferrer">Open the repository</a></div>
+</article>
+
+<div class="cards two">
+<article class="card"><h3>change-order-extractor</h3><p>Turns messy construction change-order PDFs and text into validated JSON with per-field confidence scores, source evidence and a needs-review flag. Automated tests, documented failure modes.</p><ul class="chips"><li>Python</li><li>Pydantic</li><li>pytest</li></ul><a class="l" href="https://github.com/salikhussain71-code/change-order-extractor" target="_blank" rel="noopener noreferrer">View source</a></article>
+<article class="card"><h3>ChaseLog</h3><p>Full-stack SaaS for freelancers. Free and Pro plans are enforced in the database with row-level security and a trigger. Deployed live; 7 of 7 access-control checks passed.</p><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Supabase</li></ul><a class="l" href="https://github.com/salikhussain71-code/teacherdesks-moondev-challenge" target="_blank" rel="noopener noreferrer">View source</a></article>
+<article class="card"><h3>MS-AI-Admission-Eligibility-Engine</h3><p>A reproducible engine that models program-specific admission requirements from official university sources and validates applicant inputs.</p><ul class="chips"><li>Python</li></ul><a class="l" href="https://github.com/salikhussain71-code/MS-AI-Admission-Eligibility-Engine" target="_blank" rel="noopener noreferrer">View source</a></article>
+<article class="card"><h3>PakGov-Document-Search-CLI</h3><p>Command-line keyword search across Pakistani government documents with contextual results, search history and error handling.</p><ul class="chips"><li>Python</li><li>CLI</li></ul><a class="l" href="https://github.com/salikhussain71-code/PakGov-Document-Search-CLI" target="_blank" rel="noopener noreferrer">View source</a></article>
+<article class="card"><h3>Urdu-English-Word-Frequency-Analyzer</h3><p>Bilingual text analyzer for English and Roman Urdu with word-frequency analysis, UTF-8 support and CSV output.</p><ul class="chips"><li>Python</li><li>NLP</li></ul><a class="l" href="https://github.com/salikhussain71-code/Urdu-English-Word-Frequency-Analyzer" target="_blank" rel="noopener noreferrer">View source</a></article>
+<article class="card"><h3>python-fundamentals-and-practice</h3><p>Daily Python practice, algorithms and small projects, kept as a public record of progress.</p><ul class="chips"><li>Python</li></ul><a class="l" href="https://github.com/salikhussain71-code/python-fundamentals-and-practice" target="_blank" rel="noopener noreferrer">View source</a></article>
+</div>
+<p style="margin-top:1.4rem"><a href="https://github.com/salikhussain71-code?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories on GitHub</a></p>
+</div></section></main>
+<footer><div class="c foot"><span>Salik Hussain · Rawalpindi, Pakistan · Last updated October 2026</span>
+<span><a href="https://github.com/salikhussain71-code" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/salik-hussain-7822a1388/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://orcid.org/0009-0002-2163-1728" target="_blank" rel="noopener noreferrer">ORCID</a> · <a href="mailto:salikhussain71@gmail.com">Email</a></span></div></footer>
+</body></html>
